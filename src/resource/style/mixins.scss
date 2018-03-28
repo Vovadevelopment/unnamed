@@ -1,0 +1,45 @@
+$color-accent: #fbba00;
+$color-main: #4d626c;
+$color-bg: #ededed;
+
+$break-small: 320px;
+$break-large: 1200px;
+
+@mixin e($element) {
+  &_#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &__#{$modifier} {
+    @content;
+  }
+}
+@mixin clear-text() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.profile-pic {
+  float: left;
+  width: 250px;
+  @media screen and (max-width: $break-small) {
+    width: 100px;
+    float: none;
+  }
+}
+.pull-left {
+  float: left
+}
+.pull-right {
+  float: right;
+}

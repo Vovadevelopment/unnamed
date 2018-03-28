@@ -1,0 +1,279 @@
+@import "../resource/style/mixins";
+.header-main {
+  height: 40px;
+  background: $color-accent;
+  padding: 0 30px;
+  text-align: right;
+  @include e('phone-number') {
+    font-size: 22px;
+    color: $color-main;
+    line-height: 40px;
+    float: left;
+    font-family: Oswald, Verdana, sans-serif;
+  }
+  @include e('social') {
+    line-height: 40px;
+    font-size: 23px;
+    color: $color-main;
+    text-decoration: none;
+    @include m('last') {
+      margin-left: 12px;
+    }
+  }
+}
+.navigation {
+  @include e('wrapper') {
+    padding: 0 0 28px 0;
+    background: #fff;
+    text-align: center;
+  }
+  @include e('logo') {
+    display: inline-block;
+    vertical-align: top;
+    margin: 36px 0 36px 0;
+    width: 204px;
+    height: 125px;
+    background: url("../resource/style/img/clinko_logo.png") no-repeat 0 0;
+  }
+  @include e('link') {
+    font-size: 20px;
+    color: $color-main;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 12px;
+    text-decoration: none;
+    &:hover {
+      color: $color-accent;
+    }
+    @include m('active') {
+      color: $color-accent;
+    }
+  }
+}
+.services-bg {
+  height: 416px;
+  background: url("../resource/style/img/services_bg.png") no-repeat fixed center center;
+  background-size: cover;
+  position: relative;
+  &:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background: url("../resource/style/img/dotted-mask1.png") repeat repeat;
+  }
+}
+.double-image {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 452px;
+  @include e('image-holder') {
+    position: absolute;
+    width: 55%;
+    min-width: 230px;
+    @include m('top') {
+      top: 0;
+    }
+    @include m('right') {
+      right: 5%;
+    }
+    @include m('bottom') {
+      top: 80px;
+    }
+    @include m('left') {
+      left: 0;
+    }
+    @include m('priority') {
+      z-index: 10;
+    }
+    img {
+      width: 90%;
+    }
+  }
+}
+.info {
+  display: inline-block;
+  vertical-align: top;
+  color: $color-main;
+  @include e('title-label') {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 4px;
+  }
+  @include e('title-major') {
+    font-weight: bold;
+    font-size: 44px;
+    @include m('space-bottom') {
+      margin-bottom: 33px;
+    }
+  }
+  @include e('title-accent') {
+    color: $color-accent;
+  }
+  @include e('title-minor') {
+    font-size: 20px;
+    line-height: 22px;
+    padding: 45px 0 24px 0;
+  }
+  @include e('paragraph') {
+    font-size: 14px;
+    line-height: 23px;
+    padding-bottom: 26px;
+    @include m('services-list') {
+      font-size: 16px;
+      font-style: italic;
+      line-height: 21px;
+      margin-top: 15px;
+    }
+    @include m('pull-top') {
+      margin-top: -13px;
+    }
+  }
+  @include m('services-list') {
+    padding-right: 100px;
+    @media screen and (max-width: 900px) {
+      padding-right: 50px;
+    }
+  }
+  @include m('shorten') {
+    padding-right: 100px;
+  }
+}
+.services-list {
+  background: $color-bg;
+  @include m('white-bg') {
+    background: #fff;
+  }
+  @include e('lists-holder') {
+    display: inline-block;
+    vertical-align: top;
+  }
+  @include e('list') {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    color: $color-main;
+  }
+  @include e('option') {
+    padding: 0 0 26px 31px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      top: 0;
+      background: url("../resource/style/img/checked.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.promotion {
+  min-height: 425px;
+  background: url("../resource/style/img/promotion_bg.png") no-repeat fixed center center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  &:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background: url("../resource/style/img/dotted-mask1.png") repeat repeat;
+  }
+  &:after {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     content: '';
+     background: #000;
+     opacity: .1;
+     z-index: 1;
+   }
+  @include e('title') {
+    font-size: 44px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 45px;
+    position: relative;
+    z-index: 2;
+    padding: 100px 0 33px 0;
+  }
+  @media screen and (max-width: 1250px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.accent {
+  color: $color-accent;
+}
+.parts-holder {
+  font-size: 0;
+  padding-top: 72px;
+  padding-bottom: 42px;
+  @include m('services-list') {
+    padding-bottom: 80px;
+  }
+  @include m('footer') {
+    padding-top: 36px;
+    padding-bottom: 42px;
+  }
+  @include m('promotion') {
+    padding-top: 72px;
+    padding-bottom: 58px;
+  }
+}
+.footer-main {
+  @include clearfix();
+  background: $color-main;
+  @include e('logo') {
+    display: inline-block;
+    vertical-align: top;
+    width: 141px;
+    height: 86px;
+    background: url("../resource/style/img/clinko_logo-footer.png") no-repeat;
+  }
+  @include e('navigation') {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 50px;
+  }
+  @include e('navigation-link') {
+    font-size: 16px;
+    position: relative;
+    color: $color-bg;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    padding: 0 15px;
+    &:hover {
+      color: $color-accent;
+    }
+    &:after {
+      content: '|';
+      position: absolute;
+      right: -3px;
+      color: $color-bg !important;
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+}
+
+
+
+
