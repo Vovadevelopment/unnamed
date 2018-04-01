@@ -99,3 +99,58 @@ table {
     padding-right: 30px;
   }
 }
+
+.parts-holder {
+  font-size: 0;
+  padding-top: 72px;
+  padding-bottom: 42px;
+  @include m('services-list') {
+    padding-bottom: 80px;
+  }
+  @include m('footer') {
+    padding-top: 36px;
+    padding-bottom: 42px;
+  }
+  @include m('promotion') {
+    padding-top: 72px;
+    padding-bottom: 58px;
+  }
+}
+
+.accent {
+  color: $color-accent;
+}
+
+.position-mark {
+  height: 1px;
+}
+
+.double-image {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 452px;
+  @include e('image-holder') {
+    position: absolute;
+    width: 55%;
+    min-width: 230px;
+    @include m('top') {
+      top: 0;
+    }
+    @include m('right') {
+      right: 5%;
+    }
+    @include m('bottom') {
+      top: 80px;
+    }
+    @include m('left') {
+      left: 0;
+    }
+    @include m('priority') {
+      z-index: 10;
+    }
+    img {
+      width: 90%;
+    }
+  }
+}

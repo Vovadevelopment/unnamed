@@ -1,0 +1,40 @@
+@import "../../../resource/style/mixins";
+
+.footer-main {
+  @include clearfix();
+  background: $color-main;
+  @include e('logo') {
+    display: inline-block;
+    vertical-align: top;
+    width: 141px;
+    height: 86px;
+    background: url("../../../resource/style/img/clinko_logo-footer.png") no-repeat;
+  }
+  @include e('navigation') {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 50px;
+  }
+  @include e('navigation-link') {
+    font-size: 16px;
+    position: relative;
+    color: $color-bg;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    padding: 0 15px;
+    &:hover {
+      color: $color-accent;
+    }
+    &:after {
+      content: '|';
+      position: absolute;
+      right: -3px;
+      color: $color-bg !important;
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+}

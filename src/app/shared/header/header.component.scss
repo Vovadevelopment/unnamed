@@ -1,0 +1,53 @@
+@import "../../../resource/style/mixins";
+.header-main {
+  height: 40px;
+  background: $color-accent;
+  padding: 0 30px;
+  text-align: right;
+  @include e('phone-number') {
+    font-size: 22px;
+    color: $color-main;
+    line-height: 40px;
+    float: left;
+    font-family: Oswald, Verdana, sans-serif;
+  }
+  @include e('social') {
+    line-height: 40px;
+    font-size: 23px;
+    color: $color-main;
+    text-decoration: none;
+    @include m('last') {
+      margin-left: 12px;
+    }
+  }
+}
+.navigation {
+  @include e('wrapper') {
+    padding: 0 0 28px 0;
+    background: #fff;
+    text-align: center;
+  }
+  @include e('logo') {
+    display: inline-block;
+    vertical-align: top;
+    margin: 36px 0 36px 0;
+    width: 204px;
+    height: 125px;
+    background: url("../../../resource/style/img/clinko_logo.png") no-repeat 0 0;
+  }
+  @include e('link') {
+    font-size: 20px;
+    color: $color-main;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 12px;
+    text-decoration: none;
+    &:hover {
+      color: $color-accent;
+    }
+    @include m('active') {
+      color: $color-accent;
+    }
+  }
+}
