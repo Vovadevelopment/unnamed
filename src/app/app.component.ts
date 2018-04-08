@@ -15,11 +15,7 @@ export class AppComponent implements AfterViewInit {
     image3: false,
     image4: false
   };
-  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
-    // console.log(this.image1.nativeElement.getBoundingClientRect(), window.innerHeight, window.pageXOffset, window.pageYOffset);
 
-    // console.log(this.isElementInViewport(this.image1.nativeElement));
-  }
   constructor() {}
 
   ngAfterViewInit() {
