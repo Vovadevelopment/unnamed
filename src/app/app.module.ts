@@ -7,8 +7,14 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import {RouterModule} from '@angular/router';
 import { ServicesComponent } from './pages/services/services.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 const routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: 'services', pathMatch: 'full' }
   // { path: 'addFI', component: AddFiComponent, canActivate: [CanActivateRoute]  },
   // { path: 'editFI/:id', component: AddFiComponent, canActivate: [CanActivateRoute]  },
@@ -23,7 +29,10 @@ const routes = [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ServicesComponent
+    ServicesComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -25,8 +25,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+html,
 body {
   line-height: 1;
+  height:100%;
 }
 ol, ul {
   list-style: none;
@@ -88,6 +90,7 @@ table {
     }
   }
 }
+
 .content-wrapper {
   width: $break-large;
   margin: 0 auto;

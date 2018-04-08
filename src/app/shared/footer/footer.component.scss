@@ -3,6 +3,10 @@
 .footer-main {
   @include clearfix();
   background: $color-main;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   @include e('logo') {
     display: inline-block;
     vertical-align: top;
