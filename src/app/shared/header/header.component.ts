@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {EventsService} from '../../services/events.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('headerMark') headerMark: ElementRef;
+
+  constructor(private eventsService: EventsService) { }
 
   ngOnInit() {
-    
+    this.eventsService.scrollSubject.subscribe((event)=>{
+      console.log(event);
+      console.log(this.eventsService.isElementInViewport(this.headerMark))
+    })
+
   }
 
 }

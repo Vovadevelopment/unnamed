@@ -10,6 +10,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import {EventsService} from './services/events.service';
 const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -40,7 +41,7 @@ const routes = [
     AngularFontAwesomeModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

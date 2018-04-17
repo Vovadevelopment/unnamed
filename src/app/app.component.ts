@@ -9,27 +9,13 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('image2') image2: ElementRef;
   @ViewChild('image3') image3: ElementRef;
   @ViewChild('image4') image4: ElementRef;
-  private imagesScrolled: Object = {
-    image1: false,
-    image2: false,
-    image3: false,
-    image4: false
-  };
-
   constructor() {}
 
   ngAfterViewInit() {
     // alert(document.getElementById("foo").offsetTop)
   }
 
-  private isElementInViewport(el) {
 
-    let rect = el.getBoundingClientRect();
-
-    return (
-      rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-    );
-  }
 
   calc(el) {
     console.log();
