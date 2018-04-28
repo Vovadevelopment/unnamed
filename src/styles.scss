@@ -110,6 +110,9 @@ table {
   @include m('services-list') {
     padding-bottom: 80px;
   }
+  @include m('services-promotion') {
+    padding-bottom: 75px;
+  }
   @include m('footer') {
     padding-top: 36px;
     padding-bottom: 42px;
@@ -119,6 +122,7 @@ table {
     padding-bottom: 58px;
   }
 }
+
 
 .accent {
   color: $color-accent;
