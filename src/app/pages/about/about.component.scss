@@ -1,0 +1,66 @@
+@import "../../../resource/style/mixins";
+.about {
+  height: 416px;
+  background: url("../../../resource/style/img/aboutUs-bg.png") no-repeat fixed center center;
+  background-size: cover;
+  position: relative;
+  &:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
+  }
+  @include e('title'){
+    font-weight: bold;
+    font-size: 44px;
+    color: white;
+    padding-top: 200px;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+  }
+  @include e('title-holder') {
+    padding-bottom: 30px;
+    display: inline-block;
+    margin-right: 5%;
+
+  }
+  @include e('title-article') {
+    font-size: 44px;
+    color: #494949;
+    line-height: 1.5;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    @include m('margin-top') {
+      margin-top: 100px;
+    }
+  }
+  @include e('description') {
+    display: inline-block;
+    vertical-align: top;
+    color: #4d626c;
+  }
+  @include e('paragraph') {
+    font-size: 15px;
+    line-height: 23px;
+    padding-bottom: 26px;
+    @include m('margin-bottom') {
+      margin-bottom: 50px;
+    }
+  }
+  @include e('img') {
+    width: 300px;
+    height: 300px;
+    background: url("../../../resource/style/img/about-img.png");
+    margin: 50px 121px 50px 0;
+    display: inline-block;
+  }
+}
+
+
