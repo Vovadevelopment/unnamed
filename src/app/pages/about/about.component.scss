@@ -13,7 +13,7 @@
     content: '';
     background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
   }
-  @include e('title'){
+  @include e('title') {
     font-weight: bold;
     font-size: 44px;
     color: white;
@@ -26,7 +26,6 @@
     padding-bottom: 30px;
     display: inline-block;
     margin-right: 5%;
-
   }
   @include e('title-article') {
     font-size: 44px;

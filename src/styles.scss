@@ -89,7 +89,25 @@ table {
       right: 14px;
     }
   }
+  @include m('transparent') {
+    outline: 2px solid white;
+    background: transparent;
+    fa {
+      color: white;
+    }
+    &:before {
+      content: '';
+      background: white;
+      opacity: 0.3;
+      position: absolute;
+    }
+    &:hover {
+      color: white;
+      background: transparent;
+    }
+  }
 }
+
 
 .content-wrapper {
   width: $break-large;
