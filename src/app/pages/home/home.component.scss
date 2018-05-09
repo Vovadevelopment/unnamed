@@ -27,16 +27,10 @@
     margin-bottom: 50px;
   }
 }
-.part {
-  width: 40%;
-  margin-right: 5%;
-  display: inline-block;
-}
 .services-list {
   padding-top: 50px;
-  text-align: center;
   padding-bottom: 50px;
-
+  text-align: center;
   @include e('title') {
     font-weight: bold;
     font-size: 44px;
@@ -45,26 +39,70 @@
     color: $color-main;
   }
   @include e('item') {
-    padding-bottom: 50px;
-    text-align: left;
+    width: 25%;
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    vertical-align: top;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #888888;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s all;
+      box-shadow: 10px 10px 20px #888888;
+    }
+  }
+  @include e('img'){
+    background: url("../../../resource/style/img/additional-bg.png") center;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    display: inline-block;
+    @include m('house') {
+      background: url("../../../resource/style/img/house-cleaning.png")center left;
+    }
+    @include m('window') {
+      background: url("../../../resource/style/img/window.png")center;
+      background-size: cover;
+    }
+    @include m('carpet') {
+      background: url("../../../resource/style/img/carpet.png")center;
+      background-size: cover;
+    }
+    @include m('furniture') {
+      background: url("../../../resource/style/img/furniture.png")center;
+      background-size: cover;
+    }
+    @include m('repair-room') {
+      background: url("../../../resource/style/img/room-cleaning.png")center;
+      background-size: cover;
+    }
+    @include m('restaurant') {
+      background: url("../../../resource/style/img/restaurant.png")center;
+      background-size: cover;
+    }
+  }
+  @include e('desc') {
+    //border: 1px solid black;
+    padding: 10px;
+    line-height: 1.5;
+    position: relative;
+    top: -25px;
+    background: #ffffff;
+    display: inline-block;
+  }
+  @include e('img-title') {
+    font-size: 20px;
+    color: $color-accent;
+  }
+  @include e('img-text') {
+    font-size: 15px;
     color: $color-main;
   }
-  @include e('item-icon') {
-    font-size: 24px;
-  }
-  @include e('item-title') {
-    font-size: 22px;
-    font-weight: bold;
-    border-left: 1px solid $color-main;
-    padding-left: 10px;
-    line-height: 1.5;
-  }
-  @include e('item-description') {
-    padding-left: 42px;
-    display: block;
-    line-height: 1.5;
-  }
 }
+
 .additional {
   height: 416px;
   background: url("../../../resource/style/img/additional-bg.png") no-repeat fixed bottom center;
@@ -90,13 +128,14 @@
   }
   @include e('right-part') {
     width: 50%;
+    height: 100%;
     background: #000000;
     opacity: 0.6;
     display: inline-block;
     color: white;
     font-size: 15px;
     text-align: left;
-    padding: 10px 80px 28px 30px;
+    padding: 25px 60px 20px 50px;
     line-height: 1.5;
   }
   @include e('title') {
@@ -107,8 +146,8 @@
     display: inline-block;
   }
   @include e('sub-title') {
-    font-size: 20px;
-    margin-top: 30px;
+    font-size: 19px;
+    margin-top: 35px;
     position: relative;
     margin-bottom: 30px;
   }
@@ -117,7 +156,7 @@
     font-weight: bold;
     font-size: 20px;
     text-transform: uppercase;
-    margin: 15px 0 15px 0;
+    margin: 15px 0 10px 0;
   }
 }
 .prices {

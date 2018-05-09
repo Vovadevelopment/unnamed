@@ -14,6 +14,11 @@ import {EventsService} from './services/events.service';
 import {AccordionModule} from 'primeng/primeng';
 import {PanelModule} from 'primeng/panel';
 
+
+
+
+
+
 const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
