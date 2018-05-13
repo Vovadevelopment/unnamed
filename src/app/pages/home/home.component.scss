@@ -191,7 +191,6 @@
   @include e('list-holder') {
     //background: red;
     width: 100%;
-
     font-size: 14px;
     font-weight: bold;
     color: white;
@@ -204,7 +203,6 @@
   @include e('list-title') {
     border: 1px solid white;
   }
-
 }
 
 .intro {
@@ -233,4 +231,5 @@
     position: relative;
   }
 }
+
 

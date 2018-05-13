@@ -14,10 +14,12 @@
     background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
   }
 }
+
 .info {
   display: inline-block;
   vertical-align: top;
   color: $color-main;
+  padding: 20px;
   @include e('title-label') {
     display: block;
     font-size: 16px;
@@ -62,6 +64,7 @@
     padding-right: 100px;
   }
 }
+
 .services-list {
   background: $color-bg;
   @include m('white-bg') {
@@ -94,6 +97,60 @@
     }
   }
 }
+
+.price-list{
+  width: 85%;
+  display: inline-block;
+  padding-left: 250px;
+  @include e('holder') {
+    width: 100%;
+  }
+  @include e('header') {
+    width: 100%;
+    text-align: center;
+    background: $color-accent;
+    color: $color-main;
+    text-transform: capitalize;
+  }
+  @include e('title') {
+    font-size: 20px;
+    color: $color-main;
+    padding: 10px;
+  }
+  @include e('item-holder') {
+    width: 100%;
+    text-align: center;
+  }
+  @include e('item') {
+    font-size: 20px;
+    padding: 10px;
+    color: $color-main;
+  }
+}
+.ui-panel {
+  border: none;
+  background: transparent;
+}
+.ui-panel-titlebar {
+  text-align: center;
+  background: transparent;
+  color: $color-main;
+}
+.ui-panel-title {
+  font-size: 30px;
+  position: relative;
+  font-weight: bold;
+  &:before {
+    content: 'Ціни';
+    color: $color-accent;
+    display: inline-block;
+    position: absolute;
+    left: -74px;
+  }
+}
+
+
+
 .promotion {
   min-height: 425px;
   background: url("../../../resource/style/img/promotion_bg.png") no-repeat fixed center center;

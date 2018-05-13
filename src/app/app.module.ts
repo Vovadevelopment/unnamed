@@ -11,8 +11,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {EventsService} from './services/events.service';
-import {AccordionModule} from 'primeng/primeng';
+import {AccordionModule, TabViewModule} from 'primeng/primeng';
 import {PanelModule} from 'primeng/panel';
+
 
 
 
@@ -49,7 +50,8 @@ const routes = [
     AngularFontAwesomeModule,
     RouterModule.forRoot(routes),
     AccordionModule,
-    PanelModule
+    PanelModule,
+    TabViewModule
   ],
   providers: [EventsService],
   bootstrap: [AppComponent]
