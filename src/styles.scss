@@ -134,8 +134,8 @@ table {
     padding-bottom: 75px;
   }
   @include m('footer') {
-    padding-top: 36px;
-    padding-bottom: 42px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   @include m('promotion') {
     padding-top: 72px;
