@@ -3,13 +3,12 @@ import {Subject} from 'rxjs/Subject';
 
 @Injectable()
 export class EventsService {
-  scrollSubject = new Subject();
+
   constructor() { }
-  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
-    console.log('Scrolling');
-    this.scrollSubject.next($event);
+
+  updateScrollPosition(event) {
+
   }
-  
 
   isElementInViewport(el) {
 

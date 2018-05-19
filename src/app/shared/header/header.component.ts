@@ -1,5 +1,6 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {EventsService} from '../../services/events.service';
+import {Subject} from 'rxjs/Subject';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +8,18 @@ import {EventsService} from '../../services/events.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   @ViewChild('headerMark') headerMark: ElementRef;
+
+  scrollSubject = new Subject();
+
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+    console.log('Scrolling');
+    this.eventsService.updateScrollPosition($event);
+  }
 
   constructor(private eventsService: EventsService) { }
 
   ngOnInit() {
-    this.eventsService.scrollSubject.subscribe((event)=>{
-      console.log(event);
-      console.log(this.eventsService.isElementInViewport(this.headerMark))
-    })
 
   }
 
