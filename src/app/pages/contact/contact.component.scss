@@ -78,8 +78,52 @@
   }
   @include e('form') {
     width: 40%;
-    height: 500px;
-    border: 1px solid black;
+    margin-left: 60px;
     display: inline-block;
+    vertical-align: top;
+  }
+  @include e('form-holder') {
+    //position: relative;
+    font-size: 12px;
+    transition: all .15s ease-out;
+    height: 40px;
+    line-height: 30px;
+    //top: 5px;
+    color: $color-main;
+    vertical-align: top;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $color-main;
+      content: attr(placeholder);
+      z-index: -1;
+    }
+  }
+  @include e('form-label') {
+    display: block;
+    font-size: 20px;
+    transform: translateY(25px);
+    color: $color-main;
+    transition: all 0.5s;
+  }
+  @include e('form-input') {
+    border: none;
+    border-bottom: 1px $color-main solid;
+    width: 50%;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    color: $color-main;
+  }
+  @include e ('form-small') {
+    font-size: 14px;
+    color: $color-accent;
+    transform: translateY(0);
+  }
+  @include e('form-active') {
+    width: 50%;
+    height: 30px;
+    border-bottom: 1px $color-accent solid;
   }
 }

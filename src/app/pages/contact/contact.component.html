@@ -21,9 +21,9 @@
         <hr>
       </div>
       <div class="contact_location">
-        <p class="contact_address">м. Львів</p>
-        <p class="contact_address">р. Сихів</p>
-        <p class="contact_address">вул. Б-І. Антонича</p>
+        <!--<p class="contact_address">м. Львів</p>-->
+        <!--<p class="contact_address">р. Сихів</p>-->
+        <!--<p class="contact_address">вул. Б-І. Антонича</p>-->
         <p class="contact_address contact_address__email">ел. пошта:
           <a class="contact_link" href="#">clinko@gmail.com</a>
         </p>
@@ -32,9 +32,12 @@
         </p>
       </div>
     </div>
-    <div class="contact_form">
-
+      <form class="contact_form">
+        <div  class="contact_form-holder" (click)="inputAnimation()">
+          <label class="contact_form-label" [ngClass]="{'contact_form-small': isSelected}">First Name</label>
+          <input type="text" class="contact_form-input" [ngClass]="{'contact_form-active': isSelected}">
+        </div>
+      </form>
     </div>
-  </div>
 </section>
 
