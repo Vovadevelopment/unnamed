@@ -8,7 +8,6 @@
     font-size: 22px;
     color: $color-main;
     line-height: 40px;
-    float: left;
     font-family: Oswald, Verdana, sans-serif;
   }
   @include e('social') {
@@ -16,6 +15,7 @@
     font-size: 23px;
     color: $color-main;
     text-decoration: none;
+    float: left;
     @include m('last') {
       margin-left: 12px;
     }
