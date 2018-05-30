@@ -27,10 +27,10 @@
     margin-bottom: 50px;
   }
 }
-.services-list {
+.services-boxes {
   padding-top: 50px;
-  padding-bottom: 50px;
   text-align: center;
+  padding-bottom: 50px;
   @include e('title') {
     font-weight: bold;
     font-size: 44px;
@@ -106,6 +106,7 @@
   height: 416px;
   background: url("../../../resource/style/img/additional-bg.png") no-repeat fixed bottom center;
   background-size: cover;
+  font-size: 0;
   position: relative;
   text-align: center;
   &:before {
@@ -119,8 +120,9 @@
     opacity: 0.3;
   }
   @include e('left-part') {
-    width: 49%;
+    width: 50%;
     display: inline-block;
+
     padding-top: 120px;
     vertical-align: top;
     color: white;
