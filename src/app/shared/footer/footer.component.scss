@@ -56,7 +56,7 @@
   }
   @include e('phone') {
     display: block;
-    margin-top: 20px;
+    margin-top: 50px;
     @include m('margin') {
       margin-left: 20px;
     }

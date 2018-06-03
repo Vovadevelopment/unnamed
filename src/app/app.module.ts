@@ -5,21 +5,17 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import {RouterModule} from '@angular/router';
+import { RouterModule} from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import {EventsService} from './services/events.service';
-import {AccordionModule, TabViewModule} from 'primeng/primeng';
-import {PanelModule} from 'primeng/panel';
-import {InputTextModule} from 'primeng/inputtext';
-
-
-
-
-
-
+import { EventsService } from './services/events.service';
+import { AccordionModule, TabViewModule } from 'primeng/primeng';
+import { PanelModule } from 'primeng/panel';
+import { InputTextModule } from 'primeng/inputtext';
+import { GrowlModule } from 'primeng/growl';
+import {MessageService} from 'primeng/components/common/messageservice';
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -53,9 +49,10 @@ const routes = [
     AccordionModule,
     PanelModule,
     TabViewModule,
-    InputTextModule
+    InputTextModule,
+    GrowlModule
   ],
-  providers: [EventsService],
+  providers: [EventsService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

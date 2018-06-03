@@ -3,6 +3,7 @@ $color-main: #4d626c;
 $color-bg: #ededed;
 
 $break-small: 320px;
+$break-medium: 768px;
 $break-large: 1200px;
 
 @mixin e($element) {
