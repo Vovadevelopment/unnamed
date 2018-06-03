@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import {RouterModule} from '@angular/router';
-import { ServicesComponent } from './pages/services/services.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ServicesComponent } from './pages/services/services.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {EventsService} from './services/events.service';
@@ -26,11 +26,11 @@ const routes = [
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '', redirectTo: 'services', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
   // { path: 'addFI', component: AddFiComponent, canActivate: [CanActivateRoute]  },
   // { path: 'editFI/:id', component: AddFiComponent, canActivate: [CanActivateRoute]  },
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
-  // { path: 'home', component: MainComponent, canActivate: [CanActivateRoute] },
+  // { path: '', redirectTo: 'services', pathMatch: 'full' },
+  // { path: 'services', component: MainComponent, canActivate: [CanActivateRoute] },
   // { path: 'invoices/:id', component: InvoiceComponent, canActivate: [CanActivateRoute] },
   // { path: '**', component: MainComponent, canActivate: [CanActivateRoute] }
 ];
@@ -40,8 +40,8 @@ const routes = [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ServicesComponent,
     HomeComponent,
+    ServicesComponent,
     AboutComponent,
     ContactComponent
   ],
