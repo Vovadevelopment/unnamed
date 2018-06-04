@@ -11,8 +11,7 @@ import {MessageService} from 'primeng/components/common/messageservice';
 })
 export class HeaderComponent implements OnInit {
   @ViewChild('headerMark') headerMark: ElementRef;
-
-  scrollSubject = new Subject();
+  headerFixed: boolean = false;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     // console.log('Scrolling');
@@ -20,6 +19,7 @@ export class HeaderComponent implements OnInit {
   }
 
   constructor(private eventsService: EventsService, private router: Router, private messagesService: MessageService) {
+
     router.events.subscribe( (event) => {
 
       if (event instanceof NavigationStart) {
@@ -40,7 +40,10 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.eventsService.scrollSubject.subscribe((event) => {
+      console.log(this.eventsService.isElementInViewport(this.headerMark.nativeElement));
+      this.headerFixed = !this.eventsService.isElementInViewport(this.headerMark.nativeElement)
+    })
   }
 
 }

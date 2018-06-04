@@ -192,6 +192,10 @@ table {
     position: relative;
     text-align: left;
   }
+  .ui-panel-title {
+    padding-right: 25px;
+    display: block;
+  }
   .ui-panel-titlebar-toggler {
     color: $color-main;
     border-color: $color-accent;

@@ -25,6 +25,9 @@
     position: relative;
     text-transform: uppercase;
     margin-bottom: 50px;
+    @media screen and (max-width: $break-medium) {
+      padding-top: 67px;
+    }
   }
 }
 .services-boxes {

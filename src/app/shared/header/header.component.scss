@@ -21,6 +21,23 @@
     }
   }
 }
+.fixed-header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  @include e('space') {
+    padding: 217px;
+  }
+  .navigation {
+    display: inline-block;
+    vertical-align: top;
+    @include e('logo') {
+      margin: 0;
+    }
+  }
+}
 .navigation {
   @include e('wrapper') {
     padding: 0 0 28px 0;
@@ -34,6 +51,7 @@
     width: 204px;
     height: 125px;
     background: url("../../../resource/style/img/clinko_logo.png") no-repeat 0 0;
+    background-size: cover;
   }
   @include e('link') {
     font-size: 20px;
