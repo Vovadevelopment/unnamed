@@ -1,18 +1,18 @@
 <div #headerMark class="position-mark"></div>
 <p-growl></p-growl>
-<!--<div [ngClass]="{'fixed-header_space': headerFixed}">-->
-<div>
-  <!--<div [ngClass]="{'fixed-header': headerFixed}">-->
-  <div>
+<div [ngClass]="{'fixed-header_space': headerFixed}">
+<!--<div>-->
+  <div [ngClass]="{'fixed-header': headerFixed}">
+  <!--<div>-->
     <header class="header-main">
       <a href="#" class="header-main_social"><fa name="facebook-square"></fa></a>
       <a href="#" class="header-main_social header-main_social__last"><fa name="instagram"></fa></a>
       <span class="header-main_phone-number"><fa name="phone"></fa>‎098 487 32 34</span>
     </header>
     <section class="navigation_wrapper">
-      <div class="content-wrapper">
+      <div class="content-wrapper ui-helper-clearfix" [ngClass]="{'content-wrapper__full-width': headerFixed}">
         <a class="navigation_logo" href="#"></a>
-        <nav class="navigation">
+        <nav class="navigation" [ngClass]="{'navigation__fixed': headerFixed}">
           <a routerLink="/home" routerLinkActive="navigation_link__active" class="navigation_link">головна</a>
           <a routerLink="/services" routerLinkActive="navigation_link__active" class="navigation_link">послуги та ціни</a>
           <a routerLink="/contact" routerLinkActive="navigation_link__active" class="navigation_link">контакти</a>
