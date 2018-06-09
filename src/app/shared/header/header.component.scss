@@ -68,4 +68,7 @@
       color: $color-accent;
     }
   }
+  @include m('fixed') {
+    float: right;
+  }
 }

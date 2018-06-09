@@ -115,6 +115,10 @@ table {
 .content-wrapper {
   width: $break-large;
   margin: 0 auto;
+  @include m('full-width') {
+    width: auto;
+    text-align: left;
+  }
   @media screen and (max-width: $break-large) {
    width: 100%;
   }
