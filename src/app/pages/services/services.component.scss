@@ -76,23 +76,23 @@
       background: url("../../../resource/style/img/house-cleaning.png") center left;
     }
     @include m('window') {
-      background: url("../../../resource/style/img/window.png") center center;
+      background: url("../../../resource/style/img/window-cleaning.jpeg") center center;
       background-size: cover;
     }
     @include m('carpet') {
-      background: url("../../../resource/style/img/carpet.png") center center;
+      background: url("../../../resource/style/img/carpet-cleaning.jpg") center center;
       background-size: cover;
     }
     @include m('furniture') {
-      background: url("../../../resource/style/img/furniture.png") center center;
+      background: url("../../../resource/style/img/sofa-cleaning.jpg") center center;
       background-size: cover;
     }
     @include m('repair-room') {
       background: url("../../../resource/style/img/room-cleaning.png") center center;
       background-size: cover;
     }
-    @include m('restaurant') {
-      background: url("../../../resource/style/img/restaurant.png") center center;
+    @include m('tile') {
+      background: url("../../../resource/style/img/tile-cleaning.jpg") center center;
       background-size: cover;
     }
   }
