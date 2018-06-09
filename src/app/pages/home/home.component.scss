@@ -19,10 +19,17 @@
   vertical-align: top;
   color: $color-main;
   padding: 20px;
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+    text-align: center;
+  }
   @include e('title-label') {
     display: block;
     font-size: 16px;
     padding-bottom: 4px;
+    @media screen and (max-width: $break-medium) {
+      margin-top: 50px;
+    }
   }
   @include e('title-major') {
     font-weight: bold;
@@ -61,7 +68,12 @@
   }
   @include m('shorten') {
     padding-right: 100px;
+    @media screen and (max-width: $break-medium) {
+     padding-right: 0;
+      padding-bottom: 50px;
+    }
   }
+
 }
 .services-list {
   background: $color-bg;
@@ -71,6 +83,10 @@
   @include e('lists-holder') {
     display: inline-block;
     vertical-align: top;
+    @media screen and (max-width: $break-medium) {
+      width: 100%;
+      padding-top: 30px;
+    }
   }
   @include e('list') {
     font-size: 20px;
@@ -79,6 +95,9 @@
     display: inline-block;
     vertical-align: top;
     color: $color-main;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
   }
   @include e('option') {
     padding: 0 0 26px 31px;
@@ -123,16 +142,18 @@
     z-index: 1;
   }
   @include e('title') {
-    font-size: 44px;
+    font-size: 6vh;
     font-weight: bold;
     color: #fff;
     line-height: 45px;
     position: relative;
     z-index: 2;
-    padding: 100px 0 33px 0;
+    padding-top: 7%;
+    padding-bottom: 20px;
   }
   @media screen and (max-width: 1250px) {
     padding-left: 30px;
     padding-right: 30px;
   }
+
 }

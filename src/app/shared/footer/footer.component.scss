@@ -8,6 +8,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  @media screen and (max-width: $break-medium){
+    height: 345px;
+  }
   @include e('logo') {
     margin-top: 25px;
     display: inline-block;
@@ -16,11 +19,27 @@
     height: 86px;
     margin-bottom: 25px;
     background: url("../../../resource/style/img/clinko_logo-footer.png") no-repeat;
+    @media screen and (max-width: 860px){
+      margin: 25px auto;
+
+    }
+  }
+  @include e('navigation-flex') {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    @media screen and (max-width: $break-medium){
+      flex-wrap: wrap;
+    }
   }
   @include e('navigation') {
     display: inline-block;
     vertical-align: top;
     padding-top: 50px;
+    margin-top: 25px;
+    @media screen and (max-width: 860px){
+      display: none;
+    }
   }
   @include e('navigation-link') {
     font-size: 16px;
@@ -46,19 +65,38 @@
   }
   @include e('contacts') {
     margin-top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    @media screen and (max-width: $break-medium){
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 575px){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   @include e('phones') {
     color: white;
-    font-size: 16px;
     font-weight: bold;
     display: inline-block;
     text-align: left;
+    @media screen and (max-width: 580px){
+      order: 2;
+      justify-content: center;
+    }
   }
   @include e('phone') {
     display: block;
     margin-top: 50px;
+    font-size: 16px;
     @include m('margin') {
       margin-left: 20px;
+    }
+    @media screen and (max-width: 730px){
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 580px){
+      text-align: center;
     }
   }
   @include e('email') {
@@ -76,6 +114,19 @@
     display: inline-block;
     vertical-align: top;
     margin-top: 13px;
+    margin-left: 25%;
+    @media screen and (max-width: 730px){
+      margin-left: 10%;
+    }
+    @media screen and (max-width: 603px){
+      margin-left: 0;
+      //order: 1;
+      text-align: center;
+      margin-right: 10px;
+    }
+    @media screen and (max-width: 580px){
+      order: 1;
+    }
   }
   @include e('social-title') {
     font-size: 20px;
