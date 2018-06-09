@@ -53,7 +53,7 @@
     padding-bottom: 50px;
     overflow: hidden;
     position: relative;
-    cursor: pointer;
+    //cursor: pointer;
     transition: all 0.5s ease-in-out;
     border: 2px solid #4d626c;
     &:hover {
@@ -111,7 +111,7 @@
   }
   @include e('img-title') {
     font-size: 20px;
-    color: $color-accent;
+    color: $color-main;
   }
   @include e('img-text') {
     font-size: 15px;

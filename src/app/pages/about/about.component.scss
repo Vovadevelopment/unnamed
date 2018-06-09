@@ -22,44 +22,45 @@
     position: relative;
     text-transform: uppercase;
   }
-  @include e('title-holder') {
-    padding-bottom: 30px;
-    display: inline-block;
-    margin-right: 5%;
-  }
   @include e('title-article') {
-    font-size: 44px;
+    font-size: 7vh;
     color: #494949;
     line-height: 1.5;
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    @include m('margin-top') {
-      margin-top: 100px;
+    @media screen and (max-width: $break-medium){
+      margin-bottom: 20px;
     }
   }
   @include e('description') {
     display: inline-block;
     vertical-align: top;
     color: #4d626c;
+    margin-left: 50px;
+    @media screen and (max-width: $break-medium){
+      width: 100%;
+      margin-left: 0;
+    }
   }
   @include e('paragraph') {
     font-size: 15px;
     line-height: 23px;
     padding-bottom: 26px;
-    @include m('margin-bottom') {
-      margin-bottom: 50px;
-    }
   }
-  @include e('img') {
-    width: 300px;
-    height: 300px;
-    background: url("../../../resource/style/img/clinko_logo.png") no-repeat;
-    background-position: center;
-    margin: 50px 121px 50px 0;
-    display: inline-block;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 50px;
+  @include m('end') {
+    text-align: center;
+    justify-content: center;
+  }
+  @media screen and (max-width: $break-medium){
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
   }
 }
 
