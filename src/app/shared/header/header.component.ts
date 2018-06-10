@@ -12,10 +12,15 @@ import {MessageService} from 'primeng/components/common/messageservice';
 export class HeaderComponent implements OnInit {
   @ViewChild('headerMark') headerMark: ElementRef;
   headerFixed: boolean = false;
+  isMobileMenuActive: boolean = false;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     // console.log('Scrolling');
     this.eventsService.updateScrollPosition($event);
+  }
+  @HostListener('window:resize', ['$event']) onResize(event) {
+    this.isMobileMenuActive = event.target.innerWidth < 890;
+    console.log(event.target.innerWidth);
   }
 
   constructor(private eventsService: EventsService, private router: Router, private messagesService: MessageService) {

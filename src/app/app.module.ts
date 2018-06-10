@@ -16,6 +16,7 @@ import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { GrowlModule } from 'primeng/growl';
 import {MessageService} from 'primeng/components/common/messageservice';
+import {SidebarModule} from 'primeng/components/sidebar/sidebar';
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -50,7 +51,8 @@ const routes = [
     PanelModule,
     TabViewModule,
     InputTextModule,
-    GrowlModule
+    GrowlModule,
+    SidebarModule
   ],
   providers: [EventsService, MessageService],
   bootstrap: [AppComponent]
