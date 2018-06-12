@@ -30,6 +30,13 @@
   @include e('text') {
     display: inline-block;
     margin-right: 50px;
+    @media screen and (max-width: $break-large) {
+      width: 100% !important;
+      margin-right: 0;
+    }
+    //@media screen and (max-width: $break-medium) {
+    //
+    //}
   }
   @include e('title-article') {
     font-size: 35px;

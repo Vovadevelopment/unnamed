@@ -37,6 +37,9 @@
     @include m('space-bottom') {
       margin-bottom: 33px;
     }
+    @media screen and (max-width: $break-large) {
+      font-size: 36px;
+    }
   }
   @include e('title-accent') {
     color: $color-accent;
@@ -142,7 +145,7 @@
     z-index: 1;
   }
   @include e('title') {
-    font-size: 6vh;
+    font-size: 4vh;
     font-weight: bold;
     color: #fff;
     line-height: 45px;
