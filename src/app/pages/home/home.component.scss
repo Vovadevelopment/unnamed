@@ -13,6 +13,9 @@
     content: '';
     background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
   }
+  @media screen and (max-width: $break-small) {
+    background: url("../../../resource/style/img/services_bg-mobile.png") no-repeat fixed center center;
+  }
 }
 .info {
   display: inline-block;
