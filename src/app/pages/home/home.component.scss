@@ -23,6 +23,9 @@
   vertical-align: top;
   color: $color-main;
   padding: 20px;
+  @media screen and (max-width: 890px) {
+   padding: 0;
+  }
   @media screen and (max-width: $break-medium) {
     width: 100%;
     text-align: center;
@@ -70,7 +73,7 @@
   @include m('services-list') {
     padding-right: 100px;
     @media screen and (max-width: 900px) {
-      padding-right: 50px;
+      padding-right: 0;
     }
   }
   @include m('shorten') {
