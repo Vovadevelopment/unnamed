@@ -32,6 +32,8 @@ export class HeaderComponent implements OnInit {
     router.events.subscribe( (event) => {
 
       if (event instanceof NavigationStart) {
+        this.showMobileMenu = false;
+        window.scroll(0,0);
         // Show loading indicator
       }
 

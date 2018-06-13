@@ -163,6 +163,8 @@ table {
 
 .position-mark {
   height: 1px;
+  position: absolute;
+  top: 0;
 }
 
 .double-image {
@@ -225,6 +227,8 @@ table {
     position: absolute;
     right: 14px;
     top: 22px;
+    font-size: 10px;
+    padding: 3px;
   }
   .ui-panel-content-wrapper .ui-panel-content {
     padding: 0;
