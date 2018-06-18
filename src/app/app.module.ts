@@ -13,10 +13,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { EventsService } from './services/events.service';
 import { AccordionModule, TabViewModule } from 'primeng/primeng';
 import { PanelModule } from 'primeng/panel';
-import { InputTextModule } from 'primeng/inputtext';
 import { GrowlModule } from 'primeng/growl';
 import {MessageService} from 'primeng/components/common/messageservice';
 import {SidebarModule} from 'primeng/components/sidebar/sidebar';
+import {InputTextModule} from 'primeng/inputtext';
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -50,9 +50,9 @@ const routes = [
     AccordionModule,
     PanelModule,
     TabViewModule,
-    InputTextModule,
     GrowlModule,
-    SidebarModule
+    SidebarModule,
+    InputTextModule
   ],
   providers: [EventsService, MessageService],
   bootstrap: [AppComponent]

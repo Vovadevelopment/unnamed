@@ -109,6 +109,7 @@ table {
       background: transparent;
     }
   }
+
 }
 
 
@@ -125,6 +126,11 @@ table {
   @media screen and (max-width: 1250px) {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  @include m('contact') {
+    @media screen and (max-width: 890px ){
+      padding-bottom: 50px;
+    }
   }
 }
 
