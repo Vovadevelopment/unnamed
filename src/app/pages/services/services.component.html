@@ -12,44 +12,44 @@
 <section class="services-boxes">
   <h1 class="services-boxes_title">НАШІ <span class="accent">ПОСЛУГИ</span></h1>
   <div class="content-wrapper services-boxes_content-wrapper">
-    <div class="services-boxes_item">
+    <a href="#1" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__house"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Прибирання квартир</h4>
         <!--<p class="services-boxes_img-text">A basic or “regular”-->
           <!--commercial cleaning </p>-->
       </div>
-    </div>
-    <div class="services-boxes_item">
+    </a>
+    <a href="#2" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__window"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Миття скляних поверхонь</h4>
         <!--<p class="services-boxes_img-text">A basic or “regular”-->
           <!--commercial cleaning </p>-->
       </div>
-    </div>
-    <div class="services-boxes_item">
+    </a>
+    <a href="#3" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__carpet"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Хімчистка килимів та килимових покриттів</h4>
         <!--<p class="services-boxes_img-text">A basic or “regular”-->
           <!--commercial cleaning </p>-->
       </div>
-    </div>
-    <div class="services-boxes_item">
+    </a>
+    <a href="#3" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__furniture"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">хімчистка м'яких та шкіряних меблів</h4>
       </div>
-    </div>
-    <div class="services-boxes_item">
+    </a>
+    <a href="#4" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__repair-room"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Прибирання після ремонту</h4>
         <!--<p class="services-boxes_img-text">A basic or “regular”-->
           <!--commercial cleaning </p>-->
       </div>
-    </div>
+    </a>
     <div class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__tile"></div>
       <div class="services-boxes_desc">
@@ -107,7 +107,7 @@
         НАШІ <span class="accent">ЦІНИ</span>
       </h2>
     </div>
-    <div class="prices_list">
+    <div class="prices_list" >
       <p-panel styleClass="clinko-panel" *ngIf="false" header="Генеральне прибирання" [toggleable]="true" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
@@ -120,7 +120,7 @@
           </tr>
         </table>
       </p-panel>
-      <p-panel styleClass="clinko-panel" header="Миття вікон / Віконних рам" [toggleable]="true" [style]="{'margin-bottom':'50px'}">
+      <p-panel styleClass="clinko-panel" header="Миття вікон / Віконних рам" id="2" [toggleable]="true" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
             <td class="prices_list-item">Двостулкове вікно</td>
@@ -148,7 +148,7 @@
           </tr>
         </table>
       </p-panel>
-      <p-panel styleClass="clinko-panel" header="Хімчистка текстильних поверхонь" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
+      <p-panel styleClass="clinko-panel" header="Хімчистка текстильних поверхонь" [toggleable]="true" id="3" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
             <td class="prices_list-item">Диван шкіряний</td>
@@ -188,7 +188,7 @@
           </tr>
         </table>
       </p-panel>
-      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Прибирання після ремонту" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
+      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Прибирання після ремонту" id="4" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
             <td class="prices_list-item">Однокімнатна квартира (до 40м²)</td>
@@ -208,7 +208,7 @@
           </tr>
         </table>
       </p-panel>
-      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Генеральне прибирання" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
+      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Генеральне прибирання" id="1" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
             <td class="prices_list-item">Однокімнатна квартира (до 40м²)</td>

@@ -15,7 +15,7 @@
     content: '';
     background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
   }
-  //@media screen and (max-width: $break-small) {
+  //@media screen and (max-width: 500px) {
   //  background: url("../../../resource/style/img/home-mobile.png") no-repeat fixed center center;
   //}
   @include e('title') {
@@ -340,6 +340,8 @@
     right: -50px;
   }
 }
+
+
 
 
 
