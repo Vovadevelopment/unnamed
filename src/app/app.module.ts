@@ -19,6 +19,7 @@ import {SidebarModule} from 'primeng/components/sidebar/sidebar';
 import {InputTextModule} from 'primeng/inputtext';
 import {InstagramComponent} from './pages/instagram/instagram.component';
 import {HttpModule} from "@angular/http";
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to'
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -57,9 +58,11 @@ const routes = [
     GrowlModule,
     SidebarModule,
     InputTextModule,
-    HttpModule
+    HttpModule,
+    ScrollToModule.forRoot()
   ],
   providers: [EventsService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

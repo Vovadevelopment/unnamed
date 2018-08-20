@@ -88,6 +88,7 @@
   @include e('phone') {
     font-weight: bold;
     color: $color-accent;
+    text-decoration: none;
   }
   @include e('form') {
     width: 50%;
