@@ -1,0 +1,39 @@
+@import "../../../resource/style/mixins";
+
+
+.instagram {
+
+  @include e ('title') {
+    font-size: 24px;
+    color: red;
+    text-align: center;
+  }
+  @include e ('photo-holder') {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 15px 0;
+  }
+  @include e ('photo') {
+    border: 1px solid black;
+    background:  #ffffff;
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    background-size: cover;
+  }
+}
+.bigger-photo {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  @include e('img') {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+  }
+}

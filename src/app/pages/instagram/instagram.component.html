@@ -1,0 +1,13 @@
+<section class="instagram">
+  <div class="content-wrapper">
+    <div class="instagram_title"> My Instagram</div>
+    <div class="instagram_photo-holder">
+      <img  *ngFor="let photo of photos" src="{{photo.url}}" class="instagram_photo" (click)="showCloser(photo.id)">
+      <div class="bigger-photo" *ngIf="onShowPhoto" >
+        <div class="content-wrapper">
+          <img *ngFor="let item of choosenPhoto" src="{{item.large}}" class="bigger-photo_img" (click)="hideBigPhoto()">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
