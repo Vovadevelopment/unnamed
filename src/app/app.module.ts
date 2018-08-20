@@ -18,12 +18,14 @@ import {MessageService} from 'primeng/components/common/messageservice';
 import {SidebarModule} from 'primeng/components/sidebar/sidebar';
 import {InputTextModule} from 'primeng/inputtext';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to'
+import {InstagramComponent} from "./pages/instagram/instagram.component";
 
 const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'instagram', component: InstagramComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   // { path: 'addFI', component: AddFiComponent, canActivate: [CanActivateRoute]  },
   // { path: 'editFI/:id', component: AddFiComponent, canActivate: [CanActivateRoute]  },
@@ -41,7 +43,8 @@ const routes = [
     HomeComponent,
     ServicesComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    InstagramComponent
   ],
   imports: [
     BrowserModule,
@@ -60,3 +63,4 @@ const routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 
