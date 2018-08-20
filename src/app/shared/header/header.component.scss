@@ -12,6 +12,7 @@
     color: $color-main;
     line-height: 40px;
     font-family: Oswald, Verdana, sans-serif;
+    text-decoration: none;
     @media screen and (max-width: 890px) {
       line-height: 30px;
       font-size: 19px;
@@ -151,5 +152,4 @@
     color: #ffffff;
   }
 }
-
 

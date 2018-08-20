@@ -95,7 +95,7 @@
       background-size: cover;
     }
     @include m('tile') {
-      background: url("../../../resource/style/img/tile-cleaning.jpg") center center;
+      background: url("../../../resource/style/img/bus.png") center center;
       background-size: cover;
     }
   }
@@ -249,6 +249,10 @@
   }
   @include e('additional') {
     padding-left: 10px;
+  }
+  @include e('phone') {
+    color: $color-main;
+    text-decoration: none;
   }
 }
 .ui-panel {

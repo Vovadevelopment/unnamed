@@ -1,7 +1,7 @@
 @import "../../../resource/style/mixins";
 
 .footer-main {
-  height: 315px;
+  height: 355px;
   @include clearfix();
   background: $color-main;
   position: absolute;
@@ -89,6 +89,11 @@
     display: block;
     margin-top: 50px;
     font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      color: $color-accent;
+    }
     @include m('margin') {
       margin-left: 20px;
     }
@@ -141,6 +146,17 @@
     &:hover {
       color: $color-accent;
     }
+  }
+  @include e('rights') {
+    color: #4d626c;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    background: #3b4c54;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }
 

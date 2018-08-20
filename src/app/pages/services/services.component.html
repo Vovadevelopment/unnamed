@@ -12,7 +12,7 @@
 <section class="services-boxes">
   <h1 class="services-boxes_title">НАШІ <span class="accent">ПОСЛУГИ</span></h1>
   <div class="content-wrapper services-boxes_content-wrapper">
-    <a href="#1" class="services-boxes_item">
+    <a (click)="triggerScrollTo('generalClean')" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__house"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Прибирання квартир</h4>
@@ -20,7 +20,7 @@
           <!--commercial cleaning </p>-->
       </div>
     </a>
-    <a href="#2" class="services-boxes_item">
+    <a (click)="triggerScrollTo('windowClean')" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__window"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Миття скляних поверхонь</h4>
@@ -28,21 +28,21 @@
           <!--commercial cleaning </p>-->
       </div>
     </a>
-    <a href="#3" class="services-boxes_item">
+    <a (click)="triggerScrollTo('carpetClean')" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__carpet"></div>
       <div class="services-boxes_desc">
-        <h4 class="services-boxes_img-title">Хімчистка килимів та килимових покриттів</h4>
+        <h4 class="services-boxes_img-title">Чистка / Прання килимів та килимових покриттів</h4>
         <!--<p class="services-boxes_img-text">A basic or “regular”-->
           <!--commercial cleaning </p>-->
       </div>
     </a>
-    <a href="#3" class="services-boxes_item">
+    <a (click)="triggerScrollTo('carpetClean')" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__furniture"></div>
       <div class="services-boxes_desc">
-        <h4 class="services-boxes_img-title">хімчистка м'яких та шкіряних меблів</h4>
+        <h4 class="services-boxes_img-title">Чистка / Прання м'яких та шкіряних меблів</h4>
       </div>
     </a>
-    <a href="#4" class="services-boxes_item">
+    <a (click)="triggerScrollTo('generalClean')" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__repair-room"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Прибирання після ремонту</h4>
@@ -50,14 +50,14 @@
           <!--commercial cleaning </p>-->
       </div>
     </a>
-    <div class="services-boxes_item">
+    <a (click)="triggerScrollTo('busClean')" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__tile"></div>
       <div class="services-boxes_desc">
-        <h4 class="services-boxes_img-title">Чистка плитки</h4>
+        <h4 class="services-boxes_img-title">Хімчистка салону автомобілів та автобусів</h4>
         <!--<p class="services-boxes_img-text">A basic or “regular”-->
           <!--commercial cleaning </p>-->
       </div>
-    </div>
+    </a>
   </div>
 </section>
 <section class="intro">
@@ -107,48 +107,40 @@
         НАШІ <span class="accent">ЦІНИ</span>
       </h2>
     </div>
-    <div class="prices_list" >
-      <p-panel styleClass="clinko-panel" *ngIf="false" header="Генеральне прибирання" [toggleable]="true" [style]="{'margin-bottom':'50px'}">
+    <div class="prices_list">
+      <p-panel styleClass="clinko-panel" header="Миття вікон / Віконних рам" id="1" [toggleable]="true" [collapsed]="pricesList['windowClean'].collapsed" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
-            <td class="prices_list-item">Jill</td>
-            <td class="prices_list-item">Smith</td>
+            <td class="prices_list-item">Звичайне миття вікон</td>
+            <td class="prices_list-item">20грн/(м2)</td>
           </tr>
           <tr class="prices_list-holder">
-            <td class="prices_list-item">Jill</td>
-            <td class="prices_list-item">Smith</td>
+            <td class="prices_list-item">Миття вікон після ремонту</td>
+            <td class="prices_list-item">25грн/(м2)</td>
           </tr>
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Двостулкове вікно (з хімчисткою віконної рами)</td>-->
+            <!--<td class="prices_list-item">150 грн.</td>-->
+          <!--</tr>-->
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Тристулкове вікно з одним відкриванням</td>-->
+            <!--<td class="prices_list-item">125 грн.</td>-->
+          <!--</tr>-->
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Тристулкове вікно з одним відкриванням (з хімчисткою віконної рами)</td>-->
+            <!--<td class="prices_list-item">250 грн.</td>-->
+          <!--</tr>-->
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Балконні вікна</td>-->
+            <!--<td class="prices_list-item">250 грн.</td>-->
+          <!--</tr>-->
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Балконні вікна (з хімчисткою віконної рами)</td>-->
+            <!--<td class="prices_list-item">500 грн.</td>-->
+          <!--</tr>-->
         </table>
       </p-panel>
-      <p-panel styleClass="clinko-panel" header="Миття вікон / Віконних рам" id="2" [toggleable]="true" [style]="{'margin-bottom':'50px'}">
-        <table class="prices_list-table">
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Двостулкове вікно</td>
-            <td class="prices_list-item">75 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Двостулкове вікно (з хімчисткою віконної рами)</td>
-            <td class="prices_list-item">150 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Тристулкове вікно з одним відкриванням</td>
-            <td class="prices_list-item">125 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Тристулкове вікно з одним відкриванням (з хімчисткою віконної рами)</td>
-            <td class="prices_list-item">250 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Балконні вікна</td>
-            <td class="prices_list-item">250 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Балконні вікна (з хімчисткою віконної рами)</td>
-            <td class="prices_list-item">500 грн.</td>
-          </tr>
-        </table>
-      </p-panel>
-      <p-panel styleClass="clinko-panel" header="Хімчистка текстильних поверхонь" [toggleable]="true" id="3" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
+      <p-panel styleClass="clinko-panel" header="Хімчистка текстильних поверхонь" [toggleable]="true" id="2" [collapsed]="pricesList['carpetClean'].collapsed" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
             <td class="prices_list-item">Диван шкіряний</td>
@@ -188,42 +180,54 @@
           </tr>
         </table>
       </p-panel>
-      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Прибирання після ремонту" id="4" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
+      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Прибирання" id="4" [toggleable]="true" [collapsed]="pricesList['generalClean'].collapsed" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
-            <td class="prices_list-item">Однокімнатна квартира (до 40м²)</td>
-            <td class="prices_list-item">600-950 грн</td>
+            <td class="prices_list-item">Прибирання після ремонту</td>
+            <td class="prices_list-item">28грн/(м2)</td>
           </tr>
           <tr class="prices_list-holder">
-            <td class="prices_list-item">Двохкімнатна квартира (40-70м²)</td>
-            <td class="prices_list-item">1000-1300 грн</td>
+            <td class="prices_list-item">Генеральне прибирання</td>
+            <td class="prices_list-item">24грн/(м2)</td>
           </tr>
           <tr class="prices_list-holder">
-            <td class="prices_list-item">Трикімнатна квартира (70-100м²)</td>
-            <td class="prices_list-item">1200-1800 грн</td>
+            <td class="prices_list-item">Щотижневе прибирання</td>
+            <td class="prices_list-item">19грн/(м2)</td>
           </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Багатокімнатні квартири, понад (100м²)</td>
-            <td class="prices_list-item">за домовленістю</td>
-          </tr>
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Однокімнатна квартира (до 40м²)</td>-->
+            <!--<td class="prices_list-item">400-500 грн</td>-->
+          <!--</tr>-->
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Однокімнатна квартира (до 40м²)</td>-->
+            <!--<td class="prices_list-item">400-500 грн</td>-->
+          <!--</tr>-->
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Двохкімнатна квартира (40-70м²)</td>-->
+            <!--<td class="prices_list-item">500-700 грн</td>-->
+          <!--</tr>-->
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Трикімнатна квартира (70-100м²)</td>-->
+            <!--<td class="prices_list-item">700-900 грн</td>-->
+          <!--</tr>-->
+          <!--<tr class="prices_list-holder">-->
+            <!--<td class="prices_list-item">Багатокімнатні квартири, понад (100м²)</td>-->
+            <!--<td class="prices_list-item">за домовленістю</td>-->
+          <!--</tr>-->
         </table>
       </p-panel>
-      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Генеральне прибирання" id="1" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
+      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Хімчистка автомобіля та автобуса" id="5" [toggleable]="true" [collapsed]="pricesList['busClean'].collapsed" [style]="{'margin-bottom':'50px'}">
         <table class="prices_list-table">
           <tr class="prices_list-holder">
-            <td class="prices_list-item">Однокімнатна квартира (до 40м²)</td>
-            <td class="prices_list-item">400-500 грн</td>
+            <td class="prices_list-item">Хімчистка авто</td>
+            <td class="prices_list-item">800 - 1200 грн</td>
           </tr>
           <tr class="prices_list-holder">
-            <td class="prices_list-item">Двохкімнатна квартира (40-70м²)</td>
-            <td class="prices_list-item">500-700 грн</td>
+            <td class="prices_list-item">Хімчистка автобусного крісла</td>
+            <td class="prices_list-item">45-60 грн</td>
           </tr>
           <tr class="prices_list-holder">
-            <td class="prices_list-item">Трикімнатна квартира (70-100м²)</td>
-            <td class="prices_list-item">700-900 грн</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Багатокімнатні квартири, понад (100м²)</td>
+            <td class="prices_list-item">Хімчистка автобуса</td>
             <td class="prices_list-item">за домовленістю</td>
           </tr>
         </table>
@@ -234,7 +238,7 @@
       <p class="prices_text"><strong class="accent">Важливо:</strong> Вказані ціни можуть корегуватись по прибутті на об'єкт, формування ціни залежить від багатьох чинників</p>
       <p class="prices_text">Виникли питання?<br> Телефонуйте або напишіть нам на Viber за більш детальною інформацією.</p>
       <p class="prices_text prices_text__bold">
-        <span class="prices_phone">наш тел. <fa name="phone"></fa>‎098 487 32 34</span>
+        <a href="tel: 0984873234" class="prices_phone">наш тел. <fa name="phone"></fa>‎098 487 32 34</a>
       </p>
     </div>
   </div>
