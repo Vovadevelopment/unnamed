@@ -17,7 +17,8 @@ import { GrowlModule } from 'primeng/growl';
 import {MessageService} from 'primeng/components/common/messageservice';
 import {SidebarModule} from 'primeng/components/sidebar/sidebar';
 import {InputTextModule} from 'primeng/inputtext';
-import {InstagramComponent} from "./pages/instagram/instagram.component";
+import {InstagramComponent} from './pages/instagram/instagram.component';
+import {HttpModule} from "@angular/http";
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -55,7 +56,8 @@ const routes = [
     TabViewModule,
     GrowlModule,
     SidebarModule,
-    InputTextModule
+    InputTextModule,
+    HttpModule
   ],
   providers: [EventsService, MessageService],
   bootstrap: [AppComponent]
