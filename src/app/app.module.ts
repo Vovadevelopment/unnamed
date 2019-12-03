@@ -21,7 +21,7 @@ import {InputTextModule} from 'primeng/inputtext';
 const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'services', component: ServicesComponent },
+  { path: 'прибирання-ціни', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   // { path: 'addFI', component: AddFiComponent, canActivate: [CanActivateRoute]  },

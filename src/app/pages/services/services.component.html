@@ -1,8 +1,6 @@
 <section class="home">
   <div class="content-wrapper">
-    <h2 class="home_title">живи на повну
-      <span class="accent">ми</span>
-      все приберемо!</h2>
+    <h1 class="home_title">Генеральні <span class="accent">прибирання,</span> <br> <span class="accent">хімчистка</span> текстильних поверхонь <br> у Львові</h1>
     <button class="clinko-button clinko-button__transparent" routerLink="/contact">
       замовити прибирання
       <fa name="angle-double-right"></fa>
@@ -111,9 +109,10 @@
       <p-panel styleClass="clinko-panel"
                header="Генеральне прибирання"
                [toggleable]="true"
+               [collapsed] = 'true'
                [style]="{'margin-bottom':'50px'}">
         <p-tabView>
-          <p-tabPanel header="Як ми прибираємо">
+          <p-tabPanel header="Про прибирання">
             <div class="prices_desc-container">
               <div class="prices_tab-content-wrapper">
                   <ul class="prices_tab-content" >
@@ -137,9 +136,154 @@
               <p class="prices_service-name">{{info.name}}</p>
               <p class="prices_service-name">{{info.price}}</p>
             </div>
-
-
           </p-tabPanel>
+        </p-tabView>
+      </p-panel>
+
+<!--прибирання аісля ремонту-->
+
+      <p-panel styleClass="clinko-panel"
+               header="Прибирання після ремонту"
+               [toggleable]="true"
+               [collapsed] = 'true'
+               [style]="{'margin-bottom':'50px'}">
+        <p-tabView>
+          <p-tabPanel header="Про прибирання">
+            <div class="prices_desc-container">
+              <div class="prices_tab-content-wrapper">
+                <ul class="prices_tab-content" >
+                  <li class="prices_tab-content-item" *ngFor="let descList of cleaningAfterRepair.mainInfo" >{{descList}}</li>
+                </ul>
+              </div>
+            </div>
+
+            <!--      start      hidden container-->
+            <div class="prices_attention-info-holder">
+              <span class="accent fontBold">Важливо:</span>
+              <span class="prices_attention-info">
+                {{cleaningAfterRepair.attentionInfo}}
+              </span>
+            </div>
+            <!--      end    hidden container-->
+          </p-tabPanel>
+
+          <p-tabPanel header="Ціни">
+            <div class="prices_price-row" *ngFor="let info of cleaningAfterRepair.prices">
+              <p class="prices_service-name">{{info.name}}</p>
+              <p class="prices_service-name">{{info.price}}</p>
+            </div>
+          </p-tabPanel>
+        </p-tabView>
+      </p-panel>
+
+<!--      періодичне прибирання квартир-->
+
+      <p-panel styleClass="clinko-panel"
+               header="Періодичне прибирання квартир"
+               [toggleable]="true"
+               [collapsed] = 'true'
+               [style]="{'margin-bottom':'50px'}">
+        <p-tabView>
+          <p-tabPanel header="Про прибирання">
+            <div class="prices_desc-container">
+              <div class="prices_tab-content-wrapper">
+                <ul class="prices_tab-content" >
+                  <li class="prices_tab-content-item" *ngFor="let descList of regularCleaning.mainInfo" >{{descList}}</li>
+                </ul>
+              </div>
+            </div>
+          </p-tabPanel>
+
+          <p-tabPanel header="Ціни">
+            <div class="prices_price-row" *ngFor="let info of regularCleaning.prices">
+              <p class="prices_service-name">{{info.name}}</p>
+              <p class="prices_service-name">{{info.price}}</p>
+            </div>
+            <div class="prices_attention-info-holder">
+              <span class="accent fontBold">Важливо:</span>
+              <span class="prices_attention-info">
+                {{regularCleaning.attentionInfo}}
+              </span>
+            </div>
+          </p-tabPanel>
+        </p-tabView>
+      </p-panel>
+
+<!--      Хімчтстка-->
+      <p-panel styleClass="clinko-panel"
+               header="Хімчистка текстильних поверхонь"
+               [toggleable]="true"
+               [collapsed] = 'true'
+               [style]="{'margin-bottom':'50px'}">
+        <p-tabView>
+          <p-tabPanel header="Як ми прибираємо" *ngIf="false">
+            <div class="prices_desc-container">
+              <div class="prices_tab-content-wrapper">
+                <ul class="prices_tab-content" >
+                  <li class="prices_tab-content-item" *ngFor="let descList of regularCleaning.mainInfo" >{{descList}}</li>
+                </ul>
+              </div>
+            </div>
+          </p-tabPanel>
+
+<!--          <p-tabPanel header="Ціни">-->
+            <div class="prices_price-row" *ngFor="let info of carpetCleaning.prices">
+              <p class="prices_service-name">{{info.name}}</p>
+              <p class="prices_service-name">{{info.price}}</p>
+            </div>
+<!--          </p-tabPanel>-->
+        </p-tabView>
+      </p-panel>
+
+<!--      Миття вікон / Віконних рам-->
+      <p-panel styleClass="clinko-panel"
+               header="Миття вікон / Віконних рам"
+               [toggleable]="true"
+               [collapsed] = 'true'
+               [style]="{'margin-bottom':'50px'}">
+        <p-tabView>
+          <p-tabPanel header="Як ми прибираємо" *ngIf="false">
+            <div class="prices_desc-container">
+              <div class="prices_tab-content-wrapper">
+                <ul class="prices_tab-content" >
+                  <li class="prices_tab-content-item" *ngFor="let descList of regularCleaning.mainInfo" >{{descList}}</li>
+                </ul>
+              </div>
+            </div>
+          </p-tabPanel>
+
+<!--          <p-tabPanel header="Ціни">-->
+            <div class="prices_price-row" *ngFor="let info of windowCleaning.prices">
+              <p class="prices_service-name">{{info.name}}</p>
+              <p class="prices_service-name">{{info.price}}</p>
+            </div>
+<!--          </p-tabPanel>-->
+        </p-tabView>
+      </p-panel>
+
+<!--      Додаткові послуги-->
+      <p-panel styleClass="clinko-panel"
+               header="Додаткові послуги"
+               [toggleable]="true"
+               [collapsed] = 'true'
+               [style]="{'margin-bottom':'50px'}">
+        <p-tabView>
+          <p-tabPanel header="Як ми прибираємо" *ngIf="false">
+            <div class="prices_desc-container">
+              <div class="prices_tab-content-wrapper">
+                <ul class="prices_tab-content" >
+                  <li class="prices_tab-content-item" *ngFor="let descList of regularCleaning.mainInfo" >{{descList}}</li>
+                </ul>
+              </div>
+            </div>
+          </p-tabPanel>
+
+          <!--          <p-tabPanel header="Ціни">-->
+          <div class="prices_price-row" *ngFor="let info of additionalServices.prices">
+            <p class="prices_service-name">{{info.name}}</p>
+            <p class="prices_service-name">{{info.price}}</p>
+          </div>
+          <!--          </p-tabPanel>-->
         </p-tabView>
       </p-panel>
 

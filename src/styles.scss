@@ -256,11 +256,30 @@ table {
     justify-content: center;
   }
   .ui-widget-content a{
-    color: $color-accent;
+    color: white;
+    background: $color-main;
+    &:hover {
+      color: $color-accent!important;
+    }
   }
   .ui-state-active a {
-    color: $color-main;
+    color: $color-accent;
+
+    background: $color-bg;
+  }
+  .ui-state-default {
+    border: none;
+    //background: $color-main;
+  }
+  .ui-tabview-nav {
+    padding: 0!important;
+    li {
+      top: 0!important;
+    }
   }
 }
 
-
+.fontBold {
+  font-weight: bold;
+  margin-right: 2px;
+}

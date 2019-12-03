@@ -15,7 +15,7 @@
         <p-sidebar [(visible)]="showMobileMenu" position="right" >
           <nav class="navigation-mobile" [ngClass]="{'navigation__fixed': headerFixed}">
             <a routerLink="/home" routerLinkActive="navigation_link__active" class="navigation-mobile_link">головна</a>
-            <a routerLink="/services" routerLinkActive="navigation_link__active" class="navigation-mobile_link">послуги та ціни</a>
+            <a routerLink="/прибирання-ціни" routerLinkActive="navigation_link__active" class="navigation-mobile_link">послуги та ціни</a>
             <a routerLink="/contact" routerLinkActive="navigation_link__active" class="navigation-mobile_link">контакти</a>
             <a routerLink="/about" routerLinkActive="navigation_link__active" class="navigation-mobile_link">про нас</a>
             <!--<a class="navigation_link">наш блог</a>-->
@@ -24,7 +24,7 @@
         <button class="navigation_mobile-button" (click)="mobileButton()" *ngIf="isMobileMenuActive"><fa name="fas fa-bars"></fa></button>
         <nav class="navigation" *ngIf="!isMobileMenuActive" [ngClass]="{'navigation__fixed': headerFixed}">
           <a routerLink="/home" routerLinkActive="navigation_link__active" class="navigation_link">головна</a>
-          <a routerLink="/services" routerLinkActive="navigation_link__active" class="navigation_link">послуги та ціни</a>
+          <a routerLink="/прибирання-ціни" routerLinkActive="navigation_link__active" class="navigation_link">послуги та ціни</a>
           <a routerLink="/contact" routerLinkActive="navigation_link__active" class="navigation_link">контакти</a>
           <a routerLink="/about" routerLinkActive="navigation_link__active" class="navigation_link">про нас</a>
           <!--<a class="navigation_link">наш блог</a>-->
