@@ -187,13 +187,14 @@
   //}
   @include e('title') {
     font-weight: bold;
-    font-size: 44px;
+    font-size: 30px;
+    line-height: 1.3;
     color: white;
-    padding-top: 150px;
+    padding-top: 100px;
     text-align: center;
     vertical-align: top;
     position: relative;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     margin-bottom: 50px;
     @media screen and (max-width: $break-medium) {
       padding-top: 67px;

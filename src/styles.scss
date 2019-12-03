@@ -244,6 +244,23 @@ table {
       width: 85%;
     }
   }
+  .ui-widget-content {
+    background: unset;
+    padding: 0;
+  }
+  .ui-tabview-panel {
+    padding-top: 15px;
+  }
+  .ui-tabview-nav {
+    display: flex;
+    justify-content: center;
+  }
+  .ui-widget-content a{
+    color: $color-accent;
+  }
+  .ui-state-active a {
+    color: $color-main;
+  }
 }
 
 

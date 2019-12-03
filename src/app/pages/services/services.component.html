@@ -108,142 +108,158 @@
       </h2>
     </div>
     <div class="prices_list" >
-      <p-panel styleClass="clinko-panel" *ngIf="false" header="Генеральне прибирання" [toggleable]="true" [style]="{'margin-bottom':'50px'}">
-        <table class="prices_list-table">
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Jill</td>
-            <td class="prices_list-item">Smith</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Jill</td>
-            <td class="prices_list-item">Smith</td>
-          </tr>
-        </table>
-      </p-panel>
-      <p-panel styleClass="clinko-panel" header="Миття вікон / Віконних рам" id="2" [toggleable]="true" [style]="{'margin-bottom':'50px'}">
-        <table class="prices_list-table">
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Двостулкове вікно</td>
-            <td class="prices_list-item">75 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Двостулкове вікно (з хімчисткою віконної рами)</td>
-            <td class="prices_list-item">150 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Тристулкове вікно з одним відкриванням</td>
-            <td class="prices_list-item">125 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Тристулкове вікно з одним відкриванням (з хімчисткою віконної рами)</td>
-            <td class="prices_list-item">250 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Балконні вікна</td>
-            <td class="prices_list-item">250 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Балконні вікна (з хімчисткою віконної рами)</td>
-            <td class="prices_list-item">500 грн.</td>
-          </tr>
-        </table>
-      </p-panel>
-      <p-panel styleClass="clinko-panel" header="Хімчистка текстильних поверхонь" [toggleable]="true" id="3" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
-        <table class="prices_list-table">
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Ковролін синтетика (ворс до 2 см.)</td>
-            <td class="prices_list-item">40 грн. (1м²)</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Ковролін (ворс від 2 см.), шерсть</td>
-            <td class="prices_list-item">50 грн. (1м²)</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Матрац двоспальний</td>
-            <td class="prices_list-item">400 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Матрац односпальний</td>
-            <td class="prices_list-item">300 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Офісне крісло</td>
-            <td class="prices_list-item">100 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Хімчистка ковроліну (1м²)</td>
-            <td class="prices_list-item">20 грн.</td>
-          </tr>
-        </table>
-      </p-panel>
-      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Прибирання квартир" id="4" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
-        <table class="prices_list-table">
+      <p-panel styleClass="clinko-panel"
+               header="Генеральне прибирання"
+               [toggleable]="true"
+               [style]="{'margin-bottom':'50px'}">
+        <p-tabView>
+          <p-tabPanel header="Як ми прибираємо">
+            <div class="prices_desc-container">
+              <div class="prices_tab-content-wrapper">
+                  <ul class="prices_tab-content" >
+                    <li class="prices_tab-content-item" *ngFor="let descList of flatCleaningInfo.mainInfo" >{{descList}}</li>
+                  </ul>
+              </div>
+            </div>
 
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Генеральне прибирання</td>
-            <td class="prices_list-item">30-35 грн. (1м²)</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Прибирання після ремонту</td>
-            <td class="prices_list-item">30-35 грн. (1м²)</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Періодичне прибирання</td>
-            <td class="prices_list-item">20-25 грн. (1м²)</td>
-          </tr>
-        </table>
-      </p-panel>
-      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Додаткові послуги" id="5" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">
-        <table class="prices_list-table">
+              <!--      start      hidden container-->
+              <div class="prices_additional-row" *ngIf="flatCleaningInfo.additionalInfo">
+                <ul class="prices_additionalDesc-list" *ngFor="let service of flatCleaningInfo.additionalInfo">
+                  <span class="prices_addServicesTitle">{{service.name}}</span>
+                  <li class="prices_additionalDesc-item"*ngFor="let item of service.services">{{item}} </li>
+                </ul>
+              </div>
+            <!--      end    hidden container-->
+          </p-tabPanel>
 
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Холодильник всередині</td>
-            <td class="prices_list-item">150-250 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Духовка</td>
-            <td class="prices_list-item">150-200 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Мікрохвильова піч</td>
-            <td class="prices_list-item">100 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Гриль</td>
-            <td class="prices_list-item">200-300 грн.</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Відпарювання та чистка штор</td>
-            <td class="prices_list-item">20 грн. (1м²)</td>
-          </tr>
-          <tr class="prices_list-holder">
-            <td class="prices_list-item">Відпарювання, розглажування одягу</td>
-            <td class="prices_list-item">50 грн. (1 річ)</td>
-          </tr>
-        </table>
+          <p-tabPanel header="Ціни">
+            <div class="prices_price-row" *ngFor="let info of flatCleaningInfo.prices">
+              <p class="prices_service-name">{{info.name}}</p>
+              <p class="prices_service-name">{{info.price}}</p>
+            </div>
+
+
+          </p-tabPanel>
+        </p-tabView>
       </p-panel>
-<!--      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Генеральне прибирання" id="1" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">-->
+
+<!--<table class="prices_list-table">&ndash;&gt;-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Jill</td>-->
+<!--            <td class="prices_list-item">Smith</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Jill</td>-->
+<!--            <td class="prices_list-item">Smith</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+
+
+<!--      <p-panel styleClass="clinko-panel" header="Миття вікон / Віконних рам" id="2" [toggleable]="true" [style]="{'margin-bottom':'50px'}">-->
 <!--        <table class="prices_list-table">-->
 <!--          <tr class="prices_list-holder">-->
-<!--            <td class="prices_list-item">Однокімнатна квартира (до 40м²)</td>-->
-<!--            <td class="prices_list-item">400-500 грн</td>-->
+<!--            <td class="prices_list-item">Двостулкове вікно</td>-->
+<!--            <td class="prices_list-item">75 грн.</td>-->
 <!--          </tr>-->
 <!--          <tr class="prices_list-holder">-->
-<!--            <td class="prices_list-item">Двохкімнатна квартира (40-70м²)</td>-->
-<!--            <td class="prices_list-item">500-700 грн</td>-->
+<!--            <td class="prices_list-item">Двостулкове вікно (з хімчисткою віконної рами)</td>-->
+<!--            <td class="prices_list-item">150 грн.</td>-->
 <!--          </tr>-->
 <!--          <tr class="prices_list-holder">-->
-<!--            <td class="prices_list-item">Трикімнатна квартира (70-100м²)</td>-->
-<!--            <td class="prices_list-item">700-900 грн</td>-->
+<!--            <td class="prices_list-item">Тристулкове вікно з одним відкриванням</td>-->
+<!--            <td class="prices_list-item">125 грн.</td>-->
 <!--          </tr>-->
 <!--          <tr class="prices_list-holder">-->
-<!--            <td class="prices_list-item">Багатокімнатні квартири, понад (100м²)</td>-->
-<!--            <td class="prices_list-item">за домовленістю</td>-->
+<!--            <td class="prices_list-item">Тристулкове вікно з одним відкриванням (з хімчисткою віконної рами)</td>-->
+<!--            <td class="prices_list-item">250 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Балконні вікна</td>-->
+<!--            <td class="prices_list-item">250 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Балконні вікна (з хімчисткою віконної рами)</td>-->
+<!--            <td class="prices_list-item">500 грн.</td>-->
 <!--          </tr>-->
 <!--        </table>-->
 <!--      </p-panel>-->
-    </div>
+<!--      <p-panel styleClass="clinko-panel" header="Хімчистка текстильних поверхонь" [toggleable]="true" id="3" [collapsed]="true" [style]="{'margin-bottom':'50px'}">-->
+<!--        <table class="prices_list-table">-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Ковролін синтетика (ворс до 2 см.)</td>-->
+<!--            <td class="prices_list-item">40 грн. (1м²)</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Ковролін (ворс від 2 см.), шерсть</td>-->
+<!--            <td class="prices_list-item">50 грн. (1м²)</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Матрац двоспальний</td>-->
+<!--            <td class="prices_list-item">400 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Матрац односпальний</td>-->
+<!--            <td class="prices_list-item">300 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Офісне крісло</td>-->
+<!--            <td class="prices_list-item">100 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Хімчистка ковроліну (1м²)</td>-->
+<!--            <td class="prices_list-item">20 грн.</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </p-panel>-->
+<!--      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Прибирання квартир" id="4" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">-->
+<!--        <table class="prices_list-table">-->
 
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Генеральне прибирання</td>-->
+<!--            <td class="prices_list-item">30-35 грн. (1м²)</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Прибирання після ремонту</td>-->
+<!--            <td class="prices_list-item">30-35 грн. (1м²)</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Періодичне прибирання</td>-->
+<!--            <td class="prices_list-item">20-25 грн. (1м²)</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </p-panel>-->
+<!--      <p-panel styleClass="clinko-panel clinko-panel__double-price" header="Додаткові послуги" id="5" [toggleable]="true" [collapsed]="true" [style]="{'margin-bottom':'50px'}">-->
+<!--        <table class="prices_list-table">-->
+
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Холодильник всередині</td>-->
+<!--            <td class="prices_list-item">150-250 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Духовка</td>-->
+<!--            <td class="prices_list-item">150-200 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Мікрохвильова піч</td>-->
+<!--            <td class="prices_list-item">100 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Гриль</td>-->
+<!--            <td class="prices_list-item">200-300 грн.</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Відпарювання та чистка штор</td>-->
+<!--            <td class="prices_list-item">20 грн. (1м²)</td>-->
+<!--          </tr>-->
+<!--          <tr class="prices_list-holder">-->
+<!--            <td class="prices_list-item">Відпарювання, розглажування одягу</td>-->
+<!--            <td class="prices_list-item">50 грн. (1 річ)</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </p-panel>-->
+<!--    </div>-->
+<!--  </div>-->
+    </div>
     <div class="prices_additional">
       <p class="prices_text"><strong class="accent">Важливо:</strong> Вказані ціни можуть корегуватись по прибутті на об'єкт, формування ціни залежить від ступеню забруднення</p>
       <p class="prices_text">Виникли питання?<br> Телефонуйте або напишіть нам на Viber за більш детальною інформацією.</p>
