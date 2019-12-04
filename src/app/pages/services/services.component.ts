@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Meta, Title} from '@angular/platform-browser';
 
 
 @Component({
@@ -8,6 +9,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ServicesComponent implements OnInit {
+  title = ' Прибирання ціни | Клінінгова компанія Clinko | Львів';
   flatCleaningInfo: any = {
     name: 'Генеральне прибирання ',
     mainInfo: ['Видаляємо пил з усіх поверхонь;',
@@ -214,10 +216,27 @@ export class ServicesComponent implements OnInit {
         }
       ]
   };
-  constructor() {
+  constructor(private titleService: Title, private meta: Meta) {
   }
 
   ngOnInit() {
+    this.meta.updateTag({
+      name: 'keywords', content: 'Прибирання квартир ціни, ' +
+        ' прибирання після ремонту ціни,' +
+        ' миття вікон , ' +
+        'прибирання ціни' +
+        ' хімчистка меблів ціни ' +
+        'клінінгова компанія ціни',
+    });
+    this.meta.updateTag({
+      name: 'description', content: 'Послуги:' +
+        '-генеральне прибирання;' +
+        '-хімчистка меблів;' +
+        '-миття вікон; ' +
+        '-прибирання в неробочий та нічний час львів;' +
+        '-прибирання після ремонту львів,'
+    });
+    this.titleService.setTitle(this.title);
   }
 
 

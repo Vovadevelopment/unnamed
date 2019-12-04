@@ -19,11 +19,11 @@ import {SidebarModule} from 'primeng/components/sidebar/sidebar';
 import {InputTextModule} from 'primeng/inputtext';
 
 const routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'прибирання-львів', component: HomeComponent },
+  { path: 'клінінінгова-компанія-львів', component: AboutComponent },
   { path: 'прибирання-ціни', component: ServicesComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: 'замовити-прибирання-львів', component: ContactComponent },
+  { path: '', redirectTo: 'прибирання-львів', pathMatch: 'full' }
   // { path: 'addFI', component: AddFiComponent, canActivate: [CanActivateRoute]  },
   // { path: 'editFI/:id', component: AddFiComponent, canActivate: [CanActivateRoute]  },
   // { path: '', redirectTo: 'services', pathMatch: 'full' },
