@@ -198,6 +198,10 @@
     margin-bottom: 50px;
     @media screen and (max-width: $break-medium) {
       padding-top: 67px;
+      //line-height: 1.5;
+    }
+    @media screen and (max-width: 700px) {
+      line-height: 1.2;
     }
   }
 }
