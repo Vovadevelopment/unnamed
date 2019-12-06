@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@fortawesome/fontawesome": "^1.1.8",
+    "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
     "angular-font-awesome": "^3.1.2",
     "angular-material": "^1.1.20",
     "core-js": "^2.4.1",

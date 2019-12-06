@@ -17,6 +17,7 @@ import { GrowlModule } from 'primeng/growl';
 import {MessageService} from 'primeng/components/common/messageservice';
 import {SidebarModule} from 'primeng/components/sidebar/sidebar';
 import {InputTextModule} from 'primeng/inputtext';
+import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 
 const routes = [
   { path: 'прибирання-львів', component: HomeComponent },
@@ -52,7 +53,8 @@ const routes = [
     TabViewModule,
     GrowlModule,
     SidebarModule,
-    InputTextModule
+    InputTextModule,
+    ScrollToModule.forRoot()
   ],
   providers: [EventsService, MessageService],
   bootstrap: [AppComponent]

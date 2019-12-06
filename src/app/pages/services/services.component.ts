@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, HostListener, OnInit, ViewEncapsulation} from '@angular/core';
 import {Meta, Title} from '@angular/platform-browser';
 
 
@@ -216,6 +216,8 @@ export class ServicesComponent implements OnInit {
         }
       ]
   };
+  choosenService: any;
+  isPricesColapsed: boolean = true;
   constructor(private titleService: Title, private meta: Meta) {
   }
 
@@ -238,6 +240,4 @@ export class ServicesComponent implements OnInit {
     });
     this.titleService.setTitle(this.title);
   }
-
-
 }

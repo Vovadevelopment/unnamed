@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event']) onResize(event) {
     this.isMobileMenuActive = event.target.innerWidth < 890;
     // this.isMobileMenuActive = window.innerWidth < 890;
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
   }
 
   constructor(private eventsService: EventsService, private router: Router, private messagesService: MessageService) {
@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
       }
 
       if (event instanceof NavigationEnd) {
-        console.log(event);
+        // console.log(event);
        // this.messagesService.add({severity: 'success', summary: event.url, detail: 'REDIRECTED FROM: ' + event.urlAfterRedirects});
       }
 

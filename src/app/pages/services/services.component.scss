@@ -2,7 +2,7 @@
 
 .home {
   height: 416px;
-  background: url("../../../resource/style/img/home.png") no-repeat fixed center center;
+  background: url("../../../resource/style/img/home-m.jpg") no-repeat fixed center center;
   background-size: cover;
   position: relative;
   text-align: center;
@@ -15,9 +15,14 @@
     content: '';
     background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
   }
-  //@media screen and (max-width: 500px) {
-  //  background: url("../../../resource/style/img/home-mobile.png") no-repeat fixed center center;
-  //}
+  @media screen and (max-width: 500px) {
+    background-size: cover!important;
+    background: url("../../../resource/style/img/home-s.jpg") no-repeat fixed center center;
+  }
+  @media screen and (min-width: 1350px) {
+    background-size: cover!important;
+    background: url("../../../resource/style/img/home-l.png") no-repeat fixed center center;
+  }
   @include e('title') {
     font-weight: bold;
     font-size: 25px;
@@ -77,26 +82,27 @@
     height: 250px;
     display: inline-block;
     @include m('house') {
-      background: url("../../../resource/style/img/house-cleaning.png") center left;
+      background-size: cover!important;
+      background: url("../../../resource/style/img/house-cleaning.jpg") center no-repeat;
     }
     @include m('window') {
-      background: url("../../../resource/style/img/window-cleaning.jpeg") center center;
+      background: url("../../../resource/style/img/window-cleaning.jpg") center center no-repeat;
       background-size: cover;
     }
     @include m('carpet') {
-      background: url("../../../resource/style/img/carpet-cleaning.jpg") center center;
+      background: url("../../../resource/style/img/carpet-cleaning.jpg") center center no-repeat;
       background-size: cover;
     }
     @include m('furniture') {
-      background: url("../../../resource/style/img/sofa-cleaning.jpg") center center;
+      background: url("../../../resource/style/img/sofa-cleaning.jpg") center center no-repeat;
       background-size: cover;
     }
     @include m('repair-room') {
-      background: url("../../../resource/style/img/room-cleaning.png") center center;
+      background: url("../../../resource/style/img/room-cleaning.jpg") center center no-repeat;
       background-size: cover;
     }
     @include m('tile') {
-      background: url("../../../resource/style/img/tile-cleaning.jpg") center center;
+      background: url("../../../resource/style/img/tile-cleaning.jpg") center center no-repeat;
       background-size: cover;
     }
   }
@@ -204,7 +210,8 @@
   }
   @include e('description-title') {
     font-weight: bold;
-    font-size: 44px;
+    font-size: 40px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     color: $color-main;
     text-align: center;
@@ -437,12 +444,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    //@media screen and (max-width: $break-large) {
-    //  width: 40%;
-    //}
-    //@media screen and (max-width: $break-medium) {
-    //  width: 100%;
-    //}
   }
   @include e('case-title') {
     font-size: 20px;

@@ -5,28 +5,28 @@
   <div [ngClass]="{'fixed-header': headerFixed || isMobileMenuActive}">
   <!--<div>-->
     <header class="header-main">
-      <a href="https://business.facebook.com/Clinko-601308473562787/" class="header-main_social"><fa name="facebook-square"></fa></a>
-      <a href="https://www.instagram.com/clinko.ua/?hl=uk" class="header-main_social header-main_social__last"><fa name="instagram"></fa></a>
+      <a href="https://business.facebook.com/Clinko-601308473562787/" class="header-main_social" aria-label="facebook"><fa name="facebook-square"></fa></a>
+      <a href="https://www.instagram.com/clinko.ua/?hl=uk" class="header-main_social header-main_social__last" aria-label="instagram"><fa name="instagram"></fa></a>
       <span class="header-main_phone-number"><fa name="phone"></fa>‎063 61 59 886</span>
     </header>
     <section class="navigation_wrapper" [ngClass]="{'navigation_wrapper-scroll': headerFixed || isMobileMenuActive}">
       <div class="navigation_flex-holder content-wrapper " [ngClass]="{'content-wrapper__full-width': headerFixed || isMobileMenuActive}">
-        <a class="navigation_logo" [ngClass]="{'header_navigation_logo': headerFixed}" routerLink="/home"></a>
+        <a class="navigation_logo" [ngClass]="{'header_navigation_logo': headerFixed}" routerLink="/прибирання-львів" aria-label="прибирання-львів"></a>
         <p-sidebar [(visible)]="showMobileMenu" position="right" >
           <nav class="navigation-mobile" [ngClass]="{'navigation__fixed': headerFixed}">
-            <a routerLink="/прибирання-львів" routerLinkActive="navigation_link__active" class="navigation-mobile_link">головна</a>
-            <a routerLink="/прибирання-ціни" routerLinkActive="navigation_link__active" class="navigation-mobile_link">послуги та ціни</a>
-            <a routerLink="/замовити-прибирання-львів" routerLinkActive="navigation_link__active" class="navigation-mobile_link">контакти</a>
-            <a routerLink="/клінінінгова-компанія-львів" routerLinkActive="navigation_link__active" class="navigation-mobile_link">про нас</a>
+            <a routerLink="/прибирання-львів" routerLinkActive="navigation_link__active" class="navigation-mobile_link" aria-label="прибирання-львів">головна</a>
+            <a routerLink="/прибирання-ціни" routerLinkActive="navigation_link__active" class="navigation-mobile_link" aria-label="послуги та ціни">послуги та ціни</a>
+            <a routerLink="/замовити-прибирання-львів" routerLinkActive="navigation_link__active" class="navigation-mobile_link" aria-label="замовити прибирання">контакти</a>
+            <a routerLink="/клінінінгова-компанія-львів" routerLinkActive="navigation_link__active" class="navigation-mobile_link" aria-label="про нас">про нас</a>
             <!--<a class="navigation_link">наш блог</a>-->
           </nav>
         </p-sidebar>
-        <button class="navigation_mobile-button" (click)="mobileButton()" *ngIf="isMobileMenuActive"><fa name="fas fa-bars"></fa></button>
+        <button class="navigation_mobile-button" aria-label="navigation-button" (click)="mobileButton()" *ngIf="isMobileMenuActive"><fa name="fas fa-bars"></fa></button>
         <nav class="navigation" *ngIf="!isMobileMenuActive" [ngClass]="{'navigation__fixed': headerFixed}">
-          <a routerLink="/прибирання-львів" routerLinkActive="navigation_link__active" class="navigation_link">головна</a>
-          <a routerLink="/прибирання-ціни" routerLinkActive="navigation_link__active" class="navigation_link">послуги та ціни</a>
-          <a routerLink="/замовити-прибирання-львів" routerLinkActive="navigation_link__active" class="navigation_link">контакти</a>
-          <a routerLink="/клінінінгова-компанія-львів" routerLinkActive="navigation_link__active" class="navigation_link">про нас</a>
+          <a routerLink="/прибирання-львів" routerLinkActive="navigation_link__active" class="navigation_link" aria-label="прибирання-львів">головна</a>
+          <a routerLink="/прибирання-ціни" routerLinkActive="navigation_link__active" class="navigation_link" aria-label="послуги та ціни">послуги та ціни</a>
+          <a routerLink="/замовити-прибирання-львів" routerLinkActive="navigation_link__active" class="navigation_link" aria-label="замовити прибирання">контакти</a>
+          <a routerLink="/клінінінгова-компанія-львів" routerLinkActive="navigation_link__active" class="navigation_link" aria-label="про нас">про нас</a>
           <!--<a class="navigation_link">наш блог</a>-->
         </nav>
       </div>

@@ -1,8 +1,8 @@
 @import "../../../resource/style/mixins";
 .services-bg {
   height: 416px;
-  background: url("../../../resource/style/img/services_bg.png") no-repeat fixed center center;
-  background-size: cover;
+  background: url("../../../resource/style/img/services_bg-m.jpg") no-repeat fixed center center;
+  background-size: cover!important;
   position: relative;
   text-align: center;
   &:before {
@@ -14,8 +14,13 @@
     content: '';
     background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
   }
-  @media screen and (max-width: $break-small) {
-    background: url("../../../resource/style/img/services_bg-mobile.png") no-repeat fixed center center;
+  @media screen and (max-width: 500px) {
+    background-size: cover!important;
+    background: url("../../../resource/style/img/services_bg-s.jpg") no-repeat fixed center;
+  }
+  @media screen and (min-width: 1350px) {
+    background-size: cover!important;
+    background: url("../../../resource/style/img/services_bg-l.png") no-repeat fixed center;
   }
 }
 .info {
@@ -127,8 +132,8 @@
 }
 .promotion {
   min-height: 425px;
-  background: url("../../../resource/style/img/promotion_bg.png") no-repeat fixed center center;
-  background-size: cover;
+  background: url("../../../resource/style/img/promotion_bg-m.jpg") no-repeat fixed center center;
+  background-size: cover!important;
   position: relative;
   text-align: center;
   &:before {
@@ -151,6 +156,14 @@
     opacity: .1;
     z-index: 1;
   }
+  @media screen and (max-width: 500px) {
+    background-size: cover!important;
+    background: url("../../../resource/style/img/promotion_bg-s.jpg") no-repeat fixed center center;
+  }
+  @media screen and (min-width: 1350px) {
+    background-size: cover!important;
+    background: url("../../../resource/style/img/promotion_bg-l.png") no-repeat fixed center center;
+  }
   @include e('title') {
     font-size: 4vh;
     font-weight: bold;
@@ -168,27 +181,24 @@
 
 }
 .home {
-  height: 416px;
-  background: url("../../../resource/style/img/home.png") no-repeat fixed center center;
-  background-size: cover;
-  position: relative;
-  text-align: center;
-  &:before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    content: '';
-    background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
-  }
-  //@media screen and (max-width: $break-small) {
-  //  background: url("../../../resource/style/img/home-mobile.png") no-repeat fixed center center;
+  //height: 416px;
+  ////background: url("../../../resource/style/img/home.png") no-repeat fixed center center;
+  //background-size: cover;
+  //position: relative;
+  //text-align: center;
+  //&:before {
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 100%;
+  //  top: 0;
+  //  left: 0;
+  //  content: '';
+  //  background: url("../../../resource/style/img/dotted-mask1.png") repeat repeat;
   //}
   @include e('title') {
     font-weight: bold;
     font-size: 25px;
-    line-height: 2;
+    line-height: 1.5;
     color: white;
     padding-top: 100px;
     text-align: center;
@@ -200,8 +210,8 @@
       padding-top: 67px;
       //line-height: 1.5;
     }
-    @media screen and (max-width: 700px) {
-      line-height: 1.2;
+    @media screen and (max-width: 580px) {
+      line-height: 1.3;
     }
   }
 }
