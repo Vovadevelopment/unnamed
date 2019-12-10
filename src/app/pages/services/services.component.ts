@@ -9,7 +9,7 @@ import {Meta, Title} from '@angular/platform-browser';
   encapsulation: ViewEncapsulation.None
 })
 export class ServicesComponent implements OnInit {
-  title = ' Прибирання ціни | Клінінгова компанія Clinko | Львів';
+  title = 'Прибирання ціни | Клінінгова компанія Clinko | Львів';
   flatCleaningInfo: any = {
     name: 'Генеральне прибирання ',
     mainInfo: ['Видаляємо пил з усіх поверхонь;',
@@ -217,7 +217,7 @@ export class ServicesComponent implements OnInit {
       ]
   };
   choosenService: any;
-  isPricesColapsed: boolean = true;
+  isPricesColapsed = true;
   constructor(private titleService: Title, private meta: Meta) {
   }
 
@@ -239,5 +239,11 @@ export class ServicesComponent implements OnInit {
         '-прибирання після ремонту львів,'
     });
     this.titleService.setTitle(this.title);
+  }
+
+  scrollToElement($element): void {
+    console.log($element);
+    $element.collapsed = false;
+    $element.el.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
   }
 }

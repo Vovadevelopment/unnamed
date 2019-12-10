@@ -10,7 +10,7 @@
 <section class="services-boxes">
   <h1 class="services-boxes_title">КЛІНІНГОВІ <span class="accent">ПОСЛУГИ</span></h1>
   <div class="content-wrapper services-boxes_content-wrapper">
-    <a class="services-boxes_item"  >
+    <a class="services-boxes_item" (click)="scrollToElement(flatCleaning)">
       <div class="services-boxes_img services-boxes_img__house"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Прибирання квартир</h4>
@@ -18,7 +18,7 @@
           <!--commercial cleaning </p>-->
       </div>
     </a>
-    <a href="" class="services-boxes_item">
+    <a (click)="scrollToElement(windowCleaning)" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__window"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Миття скляних поверхонь</h4>
@@ -40,7 +40,7 @@
         <h4 class="services-boxes_img-title">хімчистка м'яких та шкіряних меблів</h4>
       </div>
     </a>
-    <a href="" class="services-boxes_item">
+    <a (click)="scrollToElement(afterRepairCleaning)" class="services-boxes_item">
       <div class="services-boxes_img services-boxes_img__repair-room"></div>
       <div class="services-boxes_desc">
         <h4 class="services-boxes_img-title">Прибирання після ремонту</h4>
@@ -189,7 +189,8 @@
       <p-panel styleClass="clinko-panel"
                header="Періодичне прибирання квартир"
                [toggleable]="true"
-               [collapsed] = 'isPricesColapsed'
+               [collapsed]="isPricesColapsed"
+               #periodClean
                [style]="{'margin-bottom':'50px'}">
         <p-tabView>
           <p-tabPanel header="Про прибирання">
@@ -248,13 +249,14 @@
                header="Миття вікон / Віконних рам"
                [toggleable]="true"
                [collapsed] = 'isPricesColapsed'
+               #windowCleaning
                [style]="{'margin-bottom':'50px'}">
         <p-tabView>
           <p-tabPanel header="Як ми прибираємо" *ngIf="false">
             <div class="prices_desc-container">
               <div class="prices_tab-content-wrapper">
-                <ul class="prices_tab-content" >
-                  <li class="prices_tab-content-item" *ngFor="let descList of regularCleaning.mainInfo" >{{descList}}</li>
+                <ul class="prices_tab-content">
+                  <li class="prices_tab-content-item" *ngFor="let descList of regularCleaning.mainInfo">{{descList}}</li>
                 </ul>
               </div>
             </div>
