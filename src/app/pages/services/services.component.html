@@ -248,7 +248,7 @@
       <p-panel styleClass="clinko-panel"
                header="Миття вікон / Віконних рам"
                [toggleable]="true"
-               [collapsed] = 'isPricesColapsed'
+               [collapsed]="isPricesColapsed"
                #windowCleaning
                [style]="{'margin-bottom':'50px'}">
         <p-tabView>
@@ -275,7 +275,7 @@
       <p-panel styleClass="clinko-panel"
                header="Додаткові послуги"
                [toggleable]="true"
-               [collapsed] = 'isPricesColapsed'
+               [collapsed]="isPricesColapsed"
                [style]="{'margin-bottom':'50px'}">
         <p-tabView>
           <p-tabPanel header="Як ми прибираємо" *ngIf="false">
